@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://cyilin36.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/syntax.css' />
+    <title>Bitwarden搭建 - cyilin&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/favicon.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    
+
+    
+    <meta name="description"
+  content="做密码的掌握者" />
+<meta name="keywords"
+  content='' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cyilin36.github.io/post/bitwarden%E6%90%AD%E5%BB%BA/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Bitwarden搭建 - cyilin&#39;s blog" />
+<meta name="twitter:description"
+  content="做密码的掌握者" />
+<meta name="twitter:site" content="https://cyilin36.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://cyilin36.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Bitwarden搭建 - cyilin&#39;s blog">
+<meta property="og:description"
+  content="做密码的掌握者" />
+<meta property="og:url" content="https://cyilin36.github.io/post/bitwarden%E6%90%AD%E5%BB%BA/" />
+<meta property="og:site_name" content="Bitwarden搭建" />
+<meta property="og:image"
+  content="https://cyilin36.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2025-09-10 20:32:08 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://cyilin36.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://cyilin36.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://cyilin36.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://cyilin36.github.io/">cyilin</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="https://cyilin36.github.io/post/bitwarden%E6%90%AD%E5%BB%BA/">Bitwarden搭建</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Wed, 10 Sep 2025 20:32:08 &#43;0800"
+                    class="no-wrap">
+                    Wed, 10 Sep 2025 20:32:08 &#43;0800</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:10:17 &#43;0800"
+                    class="no-wrap">
+                    Wed, 24 Sep 2025 01:10:17 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      2898 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h1 id="前言">前言</h1>
+<p>自打接触互联网以来，密码安全就是一个非常困扰我的问题</p>
+<p><strong>尤其是自从被“神人”破解了我设置的qbittorrent密码并顺手安装了个肉鸡程序后变得记忆深刻。</strong></p>
+<p>这让我迫切的认识到密码的重要性。然而，现在有各种被泄露的密码库和弱密码库，这就造成了很大的问题：简单好记的密码容易被撞库破解；而复杂的密码又太难记，一不小心就忘了。</p>
+<p>这些问题在现在人均手机不离身的时代倒还好，毕竟靠着各大主流浏览器的密码随机生成功能，只要及时记录在备忘录里，还算能高枕无忧。而且这些浏览器一般都会自带密码管理器，可以帮你记住密码。</p>
+<p>但毕竟是第三方服务，总觉得没有握在自己手里舒心。先不谈企业泄密问题，浏览器自带的管理器就有以下几个缺点：</p>
+<ol>
+<li>随机生成的密码有时不符合某些网站的奇葩要求，还得自己额外设计。</li>
+<li>大部分密码识别只靠网页的<strong>基础域名</strong>，终究是有限制。<del>说的就是你，<strong>edge</strong>。</del></li>
+<li>企业的“朝令夕改”随时可能让服务停止，<strong>Microsoft Authenticator</strong>的停止就很好的印证了这一点。
+&hellip;</li>
+</ol>
+<p>如此种种，我决定自己弄一个本地优先的密码库。</p>
+<h1 id="本地优先的密码库bitwarden">本地优先的密码库——Bitwarden</h1>
+<p><a href="https://bitwarden.com/">Bitwarden</a>也是一个提供密码管理的服务商，在<strong>Windows、Android、ios乃至Linux都有相关的客户端，主流的Chrome和Firefox浏览器都有插件</strong>，用起来非常方便。</p>
+<p>既然我对密码的态度是<strong>本地优先</strong>，自然不可能用 Bitwarden 的官方服务，必须自己动手自建一个。Bitwarden 提供了简单方便的 Docker 自托管方案，这也是我选择它的重要原因。</p>
+<h2 id="自托管服务端">自托管服务端</h2>
+<p>server端有两个选择，一个是官方的<a href="https://github.com/bitwarden/server">bitwarden/server</a>，一个是非官方的<a href="https://github.com/dani-garcia/vaultwarden">dani-garcia/vaultwarden</a>。我是选择vaultwarden，毕竟github的star数是不会骗人的。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qp1lp-0.png" alt=""></p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qpv7n-0.png" alt=""></p>
+<p>在进行搭建之前，我们还需要准备以下东西：</p>
+<ul>
+<li>个人域名</li>
+<li>公网ip</li>
+</ul>
+<h3 id="搭建">搭建</h3>
+<p>vaultwarden的安装非常简单，它的github页面也有相关的docker命令和compose，不过这里还是给出我自己使用的compose模板。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">vaultwarden</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">vaultwarden</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">vaultwarden/server:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      -  <span style="color:#ae81ff">./data/:/data/</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">80</span>:<span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># - SIGNUPS_ALLOWED=false # 禁止新用户注册</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">DOMAIN=yourdomain</span> <span style="color:#75715e"># 这是您希望与您的Vaultwarden实例关联的域名。</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">LOGIN_RATELIMIT_MAX_BURST=20</span> <span style="color:#75715e"># 允许在一阵登录/两步验证尝试中的最大请求次数。</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">LOGIN_RATELIMIT_SECONDS=60</span> <span style="color:#75715e"># 这是来自同一IP的登录请求之间的平均秒数，在Vaultwarden限制登录次数之前。</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">ADMIN_RATELIMIT_MAX_BURST=20</span> <span style="color:#75715e"># 这与LOGIN_RATELIMIT_MAX_BURST相同，只争对admin面板。</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">ADMIN_RATELIMIT_SECONDS=60</span> <span style="color:#75715e"># 这与LOGIN_RATELIMIT_SECONDS相同</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">ADMIN_SESSION_LIFETIME=60</span> <span style="color:#75715e"># 会话持续时间</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">ADMIN_TOKEN=yourtoken</span> <span style="color:#75715e"># 此值是Vaultwarden管理员面板的令牌（一种密码）。为了安全起见，这应该是一个长的随机字符串。如果未设置此值，则管理员面板将被禁用。建议openssl rand -base64 48 生成ADMIN_TOKEN确保安全</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">SENDS_ALLOWED=false </span> <span style="color:#75715e"># 此设置决定是否允许用户创建Bitwarden发送 - 一种凭证共享形式。如果只是自己用，请求改为false</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">EMERGENCY_ACCESS_ALLOWED=true</span> <span style="color:#75715e"># 此设置控制用户是否可以启用紧急访问其账户的权限。例如，这样做可以在用户去世后，配偶可以访问密码库以获取账户凭证。可能的值：true / false。</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">WEB_VAULT_ENABLED=true</span> <span style="color:#75715e"># 此设置决定了网络保险库是否可访问。一旦您配置了您的账户和客户端，停止您的容器，然后将此值切换为false并重启Vaultwarden，可以用来防止未授权访问。可能的值：true/false。</span>
+</span></span></code></pre></div><p>根据上面的模板进行个人调整后，输入<code>docker composeup up -d</code>即可直接运行。后续访问需要使用vaultwarden实例关联的域名才能访问，也就是环境中<code>DOMAI</code>项所设置的个人域名。至于反向代理之类的，则需要另寻教程，也非常简单。</p>
+<p><code>SIGNUPS_ALLOWED</code>参数默认是<code>true</code>，允许新用户进行注册。在<strong>开始之前都必须删除该项参数或者将参数设置为<code>true</code></strong>，不然连自己也无法进行注册，右上角会弹出相应的报错。后续想一个人用，只需将<code>true</code>改为<code>false</code>即可。</p>
+<h3 id="建立账户">建立账户</h3>
+<p>我们需要在这里建立一个自己使用的账户，密码设置一个自己一定可以记得住/记载手机里面的强密码即可，以后基本上只需要记住这一个密码就完全搞定了。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qqlup-0.png" alt=""></p>
+<h3 id="新增密码">新增密码</h3>
+<p>视线来到右上角“<strong>新增</strong>”，点击即可出现各种密码类型，我相信各位最常用的应该就是<strong>登录</strong>这一个功能了。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qrm38-0.png" alt=""></p>
+<p>页面非常直白，一步一步照着填即可。网站可以多选，理论上你可以将各种不同网站但都是同一套账号密码存放在同一个项目里，不过都搭建密码库了，我相信大家还是不会做这种浪费时间和金钱的事。</p>
+<p>值得注意的是，默认的网站识别也是基于基础域名，也就是主域名，这一点跟edge等一众浏览器自带的密码管理器是一样的。点击后方的<strong>齿轮</strong>样式图标即可<strong>匹配检测</strong>更改检测机制。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qsr68-0.png" alt=""></p>
+<p>对于跟我一样多个同一个主域名下有数个子域名，且子域名服务所需的账户和密码都各不相一的情况，可以考虑将匹配检测改为<strong>主机</strong>，这样bitwarden客户端识别到符合的子域名时就能正确的显示密码，</p>
+<p>**——再也不用忍受edge一次弹出数个毫无相关的密码选项了。</p>
+<h3 id="转移密码">转移密码</h3>
+<p>不得不说，导出密码库是一个好文明，跟导出收藏夹一样，大大降低了更换密码管理器的成本。</p>
+<p>这里只说edge浏览器的操作，其他浏览器照葫芦画瓢的操作即可。我们只需进入到<strong>设置&gt;密码和自动填充&gt;Microsoft 密码管理器</strong>，点击“<strong>密码</strong>”右边的三个点，选择<strong>Export passwords</strong>，即可得到一份非常完整的csv密码文件。如果后续不在需要edge的密码管理功能，那么此时也可以顺手将“<strong>请求保存密码</strong>”关闭，并将自己的密码逐个删除。</p>
+<p>回到vaultwarden页面，点击<strong>工具&gt;导入密码</strong>，选择刚刚导出的csv文件，并在上方的<strong>文件格式</strong>选择egde，然后点击<strong>导入数据</strong>即可。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qtmq1-0.png" alt=""></p>
+<h2 id="客户端">客户端</h2>
+<p>服务端大致操作说完，接下来就是万众瞩目的客户端了。毕竟只有好的客户端才能真正发挥密码库的实力，光有服务端的bitwarden还不如备忘录来的方便。</p>
+<p>我们进入到<a href="https://bitwarden.com/">bitwarden</a>的主页，点击<strong>Download</strong>，便可下载到各种浏览器插件和各大系统的客户端。</p>
+<p>以浏览器插件为例，我们需要下方的“<strong>正在访问</strong>“选择”<strong>自托管</strong>“，并填写<strong>自己设置的vaultwarden的域名</strong>。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qu60z-0.png" alt=""></p>
+<p>登录成功后，我们便可以在客户端上同步进行密码的更新、增加、删减，它会自动上传到服务端并同步到其他客户端，达成真正的<strong>一端多用</strong>。</p>
+<p>不过由于默认的密码库超时时长太短，导致每次都得先输入一次主密码，这低于平时习惯edge密码管理的我来说极度不方便，因此我会在自己觉得”信的过且绝对不会丢失“的设备将密码库超时的时间改为”<strong>从不</strong>“，这样基本就获得了和以前没什么两样的体验了。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qvawj-0.png" alt=""></p>
+<p>值得一提的是edge的手机版本其实也可以根据上述的类似操作关闭自带密码保存，并安装手机浏览器版本的扩展，这样的也可以获得一个非常棒的使用体验。这点也是我在手机版本越做越垃圾的今天还在坚持使用edge的原因。</p>
+<h1 id="尾声">尾声</h1>
+<p>在三年前我还对浏览器的密码管理大为赞叹并大力加以使用，没想到三年后的我居然会不满于此。写到这里突然想到，这算是对美好生活的进一步追求？还是算对为满足自身欲望的有一次行动？</p>
+<p>语言真是神奇，换一下说法，褒义贬义居然能发生180°的大回旋，乐。</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://cyilin36.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/toc.css' />
+
+  
+</div>
+
+  
+</body>
+
+<script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://cyilin36.github.io/js/search.js'></script>
+
+
+
+</html>

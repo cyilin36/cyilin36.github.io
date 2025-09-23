@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://cyilin36.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/syntax.css' />
+    <title>利用JavSP&#43;EMBY打造专属的毛片影音库 - cyilin&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/favicon.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    
+
+    
+    <meta name="description"
+  content="瑟瑟才是第一动力来源" />
+<meta name="keywords"
+  content='' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cyilin36.github.io/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="利用JavSP&#43;EMBY打造专属的毛片影音库 - cyilin&#39;s blog" />
+<meta name="twitter:description"
+  content="瑟瑟才是第一动力来源" />
+<meta name="twitter:site" content="https://cyilin36.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://cyilin36.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="利用JavSP&#43;EMBY打造专属的毛片影音库 - cyilin&#39;s blog">
+<meta property="og:description"
+  content="瑟瑟才是第一动力来源" />
+<meta property="og:url" content="https://cyilin36.github.io/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/" />
+<meta property="og:site_name" content="利用JavSP&#43;EMBY打造专属的毛片影音库" />
+<meta property="og:image"
+  content="https://cyilin36.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2024-12-22 20:32:08 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://cyilin36.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://cyilin36.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://cyilin36.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://cyilin36.github.io/">cyilin</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="https://cyilin36.github.io/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/">利用JavSP&#43;EMBY打造专属的毛片影音库</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Sun, 22 Dec 2024 20:32:08 &#43;0800"
+                    class="no-wrap">
+                    Sun, 22 Dec 2024 20:32:08 &#43;0800</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:16:04 &#43;0800"
+                    class="no-wrap">
+                    Wed, 24 Sep 2025 01:16:04 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      3016 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h1 id="warring">warring！</h1>
+<p>本文仅为技术分享，阅读前请确保已经年满18且周围无人！</p>
+<p>当我们花重金购置硬盘，并把众多小姐姐“请回家”，就要开始<del>相位猛冲</del>的时候，却发现我们无法迅速且准确的找到当前最想看到的资源。面对硬盘里面浩如烟海、文件命名乱得一比的情况，连佛陀也忍不住闭上了眼睛。为了解决这一大问题，我们就需要用一点“小手段”来让资源规规矩矩的摆放好。而emby/jellyfin之类的影音管理软件绝对是不二之选！</p>
+<p><del><strong>——看着AV海报墙太有成就感了。</strong></del></p>
+<p><strong>因此本文会达成以下两个目标：</strong></p>
+<ul>
+<li>使用JavSP为自己的~~<strong>弹药库</strong>~~影片分类、刮削海报封面</li>
+<li>将已经整理好的影片让emby识别且管理</li>
+</ul>
+<h1 id="配置javsp">配置JavSP</h1>
+<p>面对硬盘里面几十上百部片子，我们不可能手动一个一个去收集每一个影片的相关信息，我们需要一个更加高效的工具来代替手工劳作，在此，我推荐使用<a href="https://github.com/Yuukiy/JavSP">JavSP</a>。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125k6m6-0.png" alt=""></p>
+<p>这是一个强大的AV元数据刮削收集工具，配置好以后，只需动动手指选择好你存放毛片的文件夹，然后等上一杯茶的功夫，就能让乱七八糟的片子乖乖的躺在它应该在的地方。</p>
+<p>接下来用window进行演示（我个人就是用winnas，<del><strong>图形化页面太香了</strong></del>）。</p>
+<p>我们进入releases，把最新版本下载下来，解压并放置到任意地方。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125k99n-0.png" alt=""></p>
+<p>在开始之前，我们需要对JavSP进行设置，让它在刮削好数据的时候能自动分类，我们用任意编辑器进入<strong>config.ini</strong>（我这里用了window自带的记事本）,找到这里</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125kgn5-0.png" alt=""></p>
+<p>我们需要对红框标出的几个地方进行更改。</p>
+<p>​<code>media_servers</code>​</p>
+<p>这里是选择我们的影音媒体库管理软件，这一步会影响到我们的刮削下来元数据文件的结构和命名。因为我们后面用emby进行管理，而jellyfin其实就是截取字emby某个开源版本做成的软件，因此我们在这里输入<code>jellyfin</code>。</p>
+<p>​<code>save_dir</code>​</p>
+<p>影片自动整理、分门别类的路径，我们需要提前在这里设置好文件夹规则。在这里带<code>$</code>的其实就是文件夹命名的变量。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#a6e22e">$actress    #演员，即女优</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$title    #影片名称，不是番号</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$num    #这个才是番号</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$year    #影片发行年份</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$date    #影片发行日期，顺序为年月日</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$director    #导演</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$label    #番号系列，比如SSIS-816的SSIS</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$serial    #影片系列</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$producer    #影片制作商</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$publisher    #影片发行商</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$censor    #有码无码，步兵还是骑兵，被破解成无码的影片实际上在各个站点其实还是为有码，因此无码破解获得的元数据是有码的</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$score    #影片评分</span>
+</span></span></code></pre></div><p>如果你设定的规则里面带有不变的变量，那么变量本身最好用<code>{}</code>括起来，比如设置一个规则为<code>$num_2023</code>，在这里2023也被跟着算作变量了，因此实际应该写为<code>{$num}2023</code>。</p>
+<p>在这里我会把文件夹规则变成<code>女优名/影片名 - 女优名 [番号] [发行年份]</code>，因此我的路径规则则是<code>$actress/$title - $actress [$num] [$year]</code>。</p>
+<p><del><strong>你可以按需搭配，按xp分类也不是不行</strong></del></p>
+<p>​<code>filename</code>​</p>
+<p>这里是影片重命名变量设置，变量设置其实和上面的<code>save_dir</code>变量设置一样，我这里只是简单用个番号<code>$num</code>即可，各位可以按需搭配。</p>
+<p>​<code>output_folder</code>​</p>
+<p>整理完成的影片会统一放在<code>output_folder</code>设置的文件夹之下，该文件夹会生成在你识别影片时所选择的文件夹之下。</p>
+<p>​<code>max_path_len</code>​</p>
+<p>允许的最长文件路径，这个数值在刮削的影片名/女优名称太长/太多的时候有用，但是一般默认设置足以对付</p>
+<p>​<code>max_actress_count</code>​</p>
+<p>重命名的时候最多出现多少个女优<code>$actress</code>，默认的10也够了 ~~<strong>，我还没见过10名以上的女优参演同一部片子，如果有的话请分享一下</strong>~~​ <del>。</del></p>
+<h1 id="影片识别的注意事项">影片识别的注意事项</h1>
+<p>已经设置好JavSP后，我们还不能进行开始刮削还需要对网络和原始影片进行确认。</p>
+<h3 id="网络">网络</h3>
+<p>由于我国算半个大内网的特殊网络环境，因此如果是在国内，请开启代理。JavSP所刮削的源站点在国内正常都是无法访问的，不开启代理会报错。最好是开启<strong>日本</strong>节点。</p>
+<p><del><strong>——这就是AV大国！</strong></del></p>
+<h3 id="影片名称确认">影片名称确认</h3>
+<p>JavSP是靠影片文件名称中的番号来进行刮削的，因此在开始刮削之前，文件名需要包含一个可以清晰识别到的番号，比如</p>
+<p>​<code>食系スイーツ男子”が出会って滅茶苦茶ヤリまくって… 憧れだったあの娘と 基地啊加蒂斯较大SSIS-816-UC.mp4</code>​</p>
+<p>这种程度识别是没有问题的。</p>
+<p><strong>现在，我们启动</strong>​<code>JavSP.exe</code>​ <strong>，选择你放置了需要刮削元数据的AV的文件夹，它就会对该目录下的所有视频进行挨个识别刮削了，等几分钟就可以全部刮削完毕。</strong></p>
+<h1 id="安装设置emby">安装设置EMBY</h1>
+<p>正如前文所述，我们是选择使用emby/jellyfin来进行影片的管理，因此我们还需要对emby进行安装以及设置。以下用emby为例子，jellyfin也可以作为参考。</p>
+<h3 id="安装emby">安装EMBY</h3>
+<p>以windows系统为例子（其他操作系统的需要你们自己去找，是在不行统一使用docker版本），进入<a href="https://emby.media/download.html">EMBY官网下载页面</a>，选择window，点击<a href="https://embydata.com/downloads/server/release10/setup.exe">Download Emby Server</a>，直接安装即可。安装过程中可能需要打开代理软件 <del><strong>（大内网环境其实有时候真的挺麻烦的）</strong></del> 解决资源下载的网络问题。</p>
+<p>安装完成后，我们在浏览器输入<strong>emby机器的</strong>​<code>ip:8096</code>​<strong>端口</strong>进行初始化设置。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125kcap-0.png" alt=""></p>
+<p>选择<code>Chinese</code>，点击<strong>next</strong>，然后刷新以下，应该就可以变成中文。</p>
+<p>设置管理员的用户密码，此账户拥有最高的权限。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125kp1k-0.png" alt=""></p>
+<p>然后一路点下一个就完事了。</p>
+<h3 id="设置av媒体库">设置AV媒体库</h3>
+<p>此时我们选择登陆刚刚建立的账户，接着点击右上角的齿轮图标，建立一个新的媒体库。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125kmu9-0.png" alt=""></p>
+<p>媒体库类型选择为<strong>电影</strong>，名称随意，文件夹为你存放刚刚刮削分类好AV的总文件夹。元数据语言、分级国家、图像下载语言全部选择Japanese。点开右上角的，把优先使用内嵌名称启用。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125kq8k-0.png" alt=""></p>
+<p>剩下的的可以按照图片来设置</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125kw85-0.png" alt=""></p>
+<p>视频预览缩略图按需处理，我习惯打开。拉动进度条的时候可以查看缩略图，<del><strong>对于心急想要开快车的司机可以定位时间点。</strong></del></p>
+<p>进行了这一串设置后，我们就可以看到emby开始扫描文件并加载元数据了。等上一会我们就可以看到一个专属于你的<strong>AV海报墙</strong>！</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125l6zv-0.png" alt=""></p>
+<p>如此，我们的海报墙便是初步完成。看着整齐划一的海报封面，不由得心潮澎湃</p>
+<p><del><strong>——和我整理一辈子的海报墙吧。</strong></del></p>
+<h1 id="补充元数据">补充元数据</h1>
+<p>其实JavSP的元数据只能识别到影片的海报和封面，无法下载女优的图片；emby自带的刮削也是完全无法令我们满足，因此我们需要人工收集各个~~<strong>老师</strong>~~女优的图片。那么哪里可以收集到大量的图片呢？</p>
+<p>答案是<strong>推特</strong>。作为一个主打社交和微博用处的网站，上面入驻了众多女优，能叫得上号的几乎都在上面，而<strong>大尺度</strong>的图片上传也使得我们可以在上面找到相当<strong>过激</strong>的图片来作为我们的emby中对女优的图片数据 <del><strong>（重点）。</strong></del></p>
+<p>我们需要在推特的搜索框中输入<code>#女优的名称</code>，日本名和中文名都这样搜一次。这样相关的tag就会完全展示出来，你可以从这些图片中挑选一份~~<strong>大尺度</strong>~~看着还可以的图片来上传到emby中</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125lail-0.png" alt=""></p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125jd5b-0.png" alt=""></p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125jk4f-0.png" alt=""></p>
+<p>然后上传一份你下载好的图片（最好是<strong>竖屏</strong>的）上传即可</p>
+<p>效果如图</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125jqwr-0.png" alt=""></p>
+<p>前文说过，由于特殊网络原因，我们刮削其实有相当概率是不成功的，不单单是JavSP，emby也是一样，因此我推荐<a href="https://post.smzdm.com/p/ad9ge02n/">修改hosts</a>来解决这一难题。毕竟代理虽好，但是流量还是要钱的 ~~<strong>（富哥除外）</strong>~~​ <strong>。</strong></p>
+<h1 id="尾声">尾声</h1>
+<p>到这里本片教程给其实也差不多该结束了，我们可以满意的点开emby，任君挑选一部适合的片子，来一场 <strong>“魔导探索”</strong> 。</p>
+<hr>
+<p>当完成激动人心的海报墙，我竟陷入了空虚之中，<strong>原来是折腾搭建的乐趣，早已超过了看片的乐趣</strong>。</p>
+<p>于是我关闭了电脑，掏出手机，继续打开MyGo二创，细细品尝<a href="https://space.bilibili.com/303309">马小花儿</a>的<a href="https://www.bilibili.com/video/BV1Wu4y1c7ey">《群星》</a>。</p>
+<p><del><strong>——比起贤者时刻不想打开A片，我还是go一辈子吧。</strong></del></p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/05/29/125jwsk-0.png" alt=""></p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://cyilin36.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/toc.css' />
+
+  
+</div>
+
+  
+</body>
+
+<script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://cyilin36.github.io/js/search.js'></script>
+
+
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://cyilin36.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/syntax.css' />
+    <title>FRP 内网穿透的个人配置 - cyilin&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/favicon.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    
+
+    
+    <meta name="description"
+  content="运营商最司马的一集" />
+<meta name="keywords"
+  content='' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cyilin36.github.io/post/frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="FRP 内网穿透的个人配置 - cyilin&#39;s blog" />
+<meta name="twitter:description"
+  content="运营商最司马的一集" />
+<meta name="twitter:site" content="https://cyilin36.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://cyilin36.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="FRP 内网穿透的个人配置 - cyilin&#39;s blog">
+<meta property="og:description"
+  content="运营商最司马的一集" />
+<meta property="og:url" content="https://cyilin36.github.io/post/frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/" />
+<meta property="og:site_name" content="FRP 内网穿透的个人配置" />
+<meta property="og:image"
+  content="https://cyilin36.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2025-02-06 21:32:08 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://cyilin36.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://cyilin36.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://cyilin36.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://cyilin36.github.io/">cyilin</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="https://cyilin36.github.io/post/frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/">FRP 内网穿透的个人配置</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Thu, 06 Feb 2025 21:32:08 &#43;0800"
+                    class="no-wrap">
+                    Thu, 06 Feb 2025 21:32:08 &#43;0800</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:10:05 &#43;0800"
+                    class="no-wrap">
+                    Wed, 24 Sep 2025 01:10:05 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      2838 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><p>总所周知，公网ipv4的ip地址在中国那是相当的珍惜。为了一个固定、甚至只是动态的公网ipv4，无数人打爆运营商的电话，甚至是花费一大笔钱开通所谓的专线方可获得，<del><strong>虽然这种固定ip在发达地区是人手一个。</strong></del></p>
+<p>但是我们访问家里的设备和运行的服务又要一个独立的ip，因此我们就发展出各种各样的技术，比如我之前写得搭建<a href="https://cyilin.top/article/nas-2"><strong>zerotier局域网</strong></a></p>
+<p>但是这种方式需要在双方设备都安装客户端，且需要在网站上把设备加入到自己的局域网中，外人想要访问就显得很是麻烦，比如给网友分享自己私人网盘资源的时候。当我们有这种需求且没有公网ip的情况下，frp技术应运而生。</p>
+<h1 id="frp">FRP</h1>
+<p>FRP——高性能的反向代理应用，作用是把流量从服务端转到客户端上。当流量访问到服务端的时候，frp便会把相关的流量转到部署了客户端的设备中中，这样我们就实现了外部网络访问到自己的设备了。</p>
+<p>那么说到这里，我想你也很敏感的注意到，<strong>咱们还是需要公网ip以便于我们可以直接访问到服务端。</strong> 我们是租用一台带有公网ip的云服务器来部署服务端。这样做的优势就在于租用云服务的成本通常要小于直接拉取专线，个人用户拉专线只是为了一个公网ip其实还是很亏的 <del><strong>（说得就是广东，连动态公网都不给的屑运营商）。</strong></del></p>
+<h2 id="购买服务器">购买服务器</h2>
+<p>在正如前文所述，在开始正式部署之前我们需要租用一个带有公网ip的服务器，按需购买即可。购买之前看清楚是否带<strong>独立的公网ip</strong>（只是开放数个端口的也可以，但是对frp有部分限制）、<strong>上下行带宽</strong>（服务器一般的带宽单位是Mbps/s，而我们日常生活中的流量速度单位是MB/s，前者除以8才能得到后者），可以的话尽量找大牌的服务器商，比如阿里云这类，选择中小服务器商有跑路的风险。</p>
+<h2 id="配置frps服务端">配置FRPS（服务端）</h2>
+<p>我们需要在服务器部署frp服务端（<strong>frps</strong>），在客户端上部署frp客户端（<strong>frpc</strong>）。</p>
+<p><a href="https://github.com/fatedier/frp/releases">Releases · fatedier/frp · GitHub</a></p>
+<p>我们从上面的连接下载适合自己版本的frp（frp_windows_amd64）并解压，可以得到以下这几个文件：</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/05/29/118gcer-0.png" alt=""></p>
+<p>我们首先把带<strong>frps</strong>字样的文件放到我们租用的服务器上，然后点开<strong>frps.toml</strong>，对frps进行基础配置。由于我只是需要转发http网页流量，因此我是这么写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e">#【frp服务端口，用于frps和frpc之间通信用的】</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">bindPort</span> = <span style="color:#ae81ff">17603</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#【http服务端口，用于传输http流量，适合网页流量传输】</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">vhosthttpport</span> = <span style="color:#ae81ff">13470</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#【frps和frpc之间的通信授权码，为了安全起见青改成复杂一点的】</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">token</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>
+</span></span></code></pre></div><p>在fprs的配置中，tcp类型的流量是不需要单独设置端口的，且我们是需要在frpc配中设置；tcpmux则是需要单独设置端口，它支持服务端 TCP 端口的多路复用，允许通过同一端口访问不同的内网服务，但是我一直没搞明白，因此在此按下不谈。</p>
+<h2 id="配置frpc客户端">配置FRPC（客户端）</h2>
+<p>我们把带<strong>frpc</strong>字样的文件放在自己的设备上，然后点开<strong>frpc.toml</strong>，对frpc进行基础配置。由于我只是需要转发http网页流量，因此我是这么写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># 【公网服务器的ip地址】</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serverAddr</span> = <span style="color:#e6db74">&#34;xxx.xxx.xxx.xxx&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#【frp服务端口，用于frps和frpc之间通信用的，端口设置成和bindPort一样】</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serverPort</span> = <span style="color:#ae81ff">17603</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#【frps和frpc之间的通信授权码，之前写什么这里就写什么】</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">token</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">proxies</span>]]    <span style="color:#75715e">#代表一个项目的开始和结尾</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>    <span style="color:#75715e"># 项目的名称</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;http&#34;</span>    <span style="color:#75715e"># 项目的类型，前面我只是指定了http端口，因此这里我输入http</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localIP</span> = <span style="color:#e6db74">&#34;xxx.xxx.xxx.xxx&#34;</span>    <span style="color:#75715e">#本地ip，不一定是要frpc的ip，frp本身是有转发功能的，写入真实访问到的ip即可</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localPort</span> = <span style="color:#a6e22e">xxxx</span>    <span style="color:#75715e">#访问到的机器的具体端口</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">customdomains</span> = [<span style="color:#e6db74">&#34;xxxxx.xxxxx.xx&#34;</span>]    <span style="color:#75715e">#域名，这里是根据域名来流量应该转发到哪里端口</span>
+</span></span></code></pre></div><p>以上配置中，我是设置了<strong>http类型端口</strong>进行流量转发，并通过<code>customdomains</code>参数来规划每一部分流量的具体走向，因此我这里是输入自己的域名。</p>
+<p>域名配置可以看我之前写得这一片教程<a href="https://cyilin.top/article/nas-2">稍微剑走偏锋的nas方案——2 | cyilin的小房间</a>，只要看域名那一块即可。</p>
+<p>对于tcp的流量，之前说过我们是<strong>不需要</strong>在frps指定一个tcp端口的，因为tcp会直接占用frps端的一整个端口，无法像是<strong>http类型</strong>这样通过<code>customdomains</code>来判定流量具体走向到什么端口。因此我们可以这么写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># 【公网服务器的ip地址】</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serverAddr</span> = <span style="color:#e6db74">&#34;xxx.xxx.xxx.xxx&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#【frps和frpc之间的通信授权码，之前写什么这里就写什么】</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">token</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">proxies</span>]]    <span style="color:#75715e">#代表一个项目的开始和结尾</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>    <span style="color:#75715e"># 项目的名称</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;tcp&#34;</span>    <span style="color:#75715e"># 项目的类型，前面我只是指定了http端口，因此这里我输入http</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localIP</span> = <span style="color:#e6db74">&#34;xxx.xxx.xxx.xxx&#34;</span>    <span style="color:#75715e">#本地ip，不一定是要frpc的ip，frp本身是有转发功能的，写入真实访问到的ip即可</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localPort</span> = <span style="color:#ae81ff">1029</span>    <span style="color:#75715e">#访问到的本地机器的具体端口</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">remotePort</span> = <span style="color:#ae81ff">6000</span>    <span style="color:#75715e">#监听服务器的端口，会把该端口的所有流量都转发到localPort设置的端口上</span>
+</span></span></code></pre></div><h1 id="反向代理">反向代理</h1>
+<p>根据前面的步骤，我设置了<strong>13470</strong>端口作为http的流量转发端口，我们需要把访问到公网服务器的流量转发到这个端口上，因此反向代理或者端口转发就得派上用场了。而反向代理可以挂上SSL证书且可以实现端口复用，因此我优先选择使用反向代理。</p>
+<p>至于SSL证书和反向代理的使用请看之前的博客，翻到<strong>SSL证书</strong>这一部分。</p>
+<p><a href="https://cyilin.top/article/nas-2"></a></p>
+<p>在这里需要注意的是，我们设置的反向代理后端地址是写本机地址（127.0.0.1）的http流量转发端口。以上面的例子来说，就是写入<code>127.0.0.1:13470</code>​</p>
+<p>弄完之后，我们在在frps目录下启动powershell并输入<code>./frps -c ./frps.toml</code>，在frpc目录下启动powershell并输入<code>./frpc -c ./frpc.toml</code>，随后在浏览器进行连接测试即可，能成功访问那就是正常运行。</p>
+<h1 id="frp常驻后台">Frp常驻后台</h1>
+<p>上面使用命令启动frp不但容易误触，而且每次启动也不方便，关机后还得再次输入命令，因此我们需要一个自动化启动的方案。由于我使用的是windows作为演示，因此我这里使用**<a href="https://nssm.cc/download">nssm</a>**将frp注册为windows的系统服务，从而达成自动开机启动frp。</p>
+<p>我们下载合适自己系统的**<a href="https://nssm.cc/download">nssm</a><strong>，并放到一个合适的目录上。打开cmd，使用<code>cd</code>命令进入到含有</strong>nssm.exe**的文件夹上。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/118g9xe-0.png" alt=""></p>
+<p>然后我们输入命令<code>nssm install</code>，就可以得到这样一个弹窗。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/118gbrg-0.png" alt=""></p>
+<p>在<strong>Application Path</strong>中选择frps的exe文件；<strong>Statup directory</strong>会自动填写到frp的根目录，不用管；<strong>Arguments</strong>则是填写<code>-c frps的配置文件路径</code>既可；<strong>Service name</strong>则是随意，指的是服务的名称，自己能记住就行，不能够和已有的服务同名。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/05/29/118g84o-0.png" alt=""></p>
+<p>然后我们点击<strong>Install service</strong>既可成功注册，frpc端也是这样如法炮制。</p>
+<p>接着我们在搜索并打开“<strong>服务</strong>”，找到刚刚注册好的frp服务（<strong>Service name</strong>），然后点击启动即可。需要注意的是我们要右键frp服务并打开<strong>属性，</strong> 并把启动类型改成<strong>自动</strong>，这样才能一开机就自启动frp。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/05/29/118glg3-0.png" alt=""></p>
+<p>至此，便是我目前配置的frp。</p>
+<p>如果不是该死的运营商天天想着拿ipv4收钱，我也不用这么麻烦。但是当我看到阿里云的ipv6开通居然要额外缴费，真是感慨：<strong>一山还有一山高啊。</strong></p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://cyilin36.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/toc.css' />
+
+  
+</div>
+
+  
+</body>
+
+<script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://cyilin36.github.io/js/search.js'></script>
+
+
+
+</html>

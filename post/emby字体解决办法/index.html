@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://cyilin36.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/syntax.css' />
+    <title>Emby字体解决办法 - cyilin&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/favicon.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    
+
+    
+    <meta name="description"
+  content="消灭口口口字幕" />
+<meta name="keywords"
+  content='' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cyilin36.github.io/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Emby字体解决办法 - cyilin&#39;s blog" />
+<meta name="twitter:description"
+  content="消灭口口口字幕" />
+<meta name="twitter:site" content="https://cyilin36.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://cyilin36.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Emby字体解决办法 - cyilin&#39;s blog">
+<meta property="og:description"
+  content="消灭口口口字幕" />
+<meta property="og:url" content="https://cyilin36.github.io/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" />
+<meta property="og:site_name" content="Emby字体解决办法" />
+<meta property="og:image"
+  content="https://cyilin36.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2025-07-13 20:32:08 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://cyilin36.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://cyilin36.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://cyilin36.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://cyilin36.github.io/">cyilin</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="https://cyilin36.github.io/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Emby字体解决办法</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Sun, 13 Jul 2025 20:32:08 &#43;0800"
+                    class="no-wrap">
+                    Sun, 13 Jul 2025 20:32:08 &#43;0800</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:21:19 &#43;0800"
+                    class="no-wrap">
+                    Wed, 24 Sep 2025 01:21:19 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      1083 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h1 id="前言">前言</h1>
+<p>最近时间充裕，没事就补番或者二刷老番，这自然是要用我花了大心思弄得<strong>emby</strong>。</p>
+<p>这不用不知道，一用吓一跳阿。在部分番剧中，较为生僻的简体中文会出现 <strong>“口口口”</strong> 的现象。比如这样：</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/07/13/kicxg5-0.png" alt=""></p>
+<p>虽然出现的机率很小，也几乎不怎么影响观感，但就像猫儿挠木板一样在刺挠着我的神经，让我久久不得入睡。<del><strong>为了晚上的睡眠质量，</strong></del> 我决定速速解决这个问题。</p>
+<h1 id="解决方案">解决方案</h1>
+<p>折腾过上古卷轴mod和翻译的我很明确知道这是字体缺失造成的，于是经过我谷歌和ai的一顿搜索，我轻松就获得了解决方案——<strong>字体子集化</strong>！</p>
+<blockquote>
+<p><strong>字体子集化</strong>：简单来说，它会从完整的字体文件中<strong>只提取出你的项目实际用到的字符</strong>，然后生成一个新的、更小的字体文件。</p></blockquote>
+<p>也就是说只要对所有出现了<strong>口口口</strong>的字幕进行一次子集化就没什么事情了。</p>
+<p>然而，我的字幕数量繁多，且不知道那些字幕是需要子集化的。如果所有字幕都进行一次，那得通宵了。而且子集化所需的前置工具准备也略微繁琐，详情请看初之音的<a href="https://www.himiku.com/archives/my-solution-for-perfect-anime-subtitle-fonts.html">字体解决方案博客</a>。</p>
+<p>这时我灵光一闪——有没有能在视频播放时候<strong>实时进行子集化</strong>的emby插件呢！？</p>
+<p><strong>有的兄弟，包有的！</strong></p>
+<p>在我第二次搜索中，发现了一个满足我需求的工具——<strong><a href="https://github.com/RiderLty/fontInAss">fontInAss</a></strong>。 <del>（github真是宝库啊，这是第几次在上面发现可解燃眉之急的项目了）</del></p>
+<h2 id="fontinass">fontInAss</h2>
+<p><a href="https://github.com/RiderLty/fontInAss"><strong>fontInAss</strong></a>是实时将字体子集化后嵌入ass的小工具，用于在未安装对应字体的系统上正确显示字幕。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/07/13/m32kfj-0.png" alt=""></p>
+<p>其提供了手动安装和docker快速部署两种方案。虽然不是可以直接内嵌在emby中的插件，但是我恰好有nas，这点差别也不用多在意。</p>
+<p>我是个懒狗，docker部署自然就成了最佳选择。其部署方式也非常简单，作者也给出了部署的命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -d --name<span style="color:#f92672">=</span>fontinass --restart<span style="color:#f92672">=</span>unless-stopped <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -p 8012:8012 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -e EMBY_SERVER_URL<span style="color:#f92672">=</span>http://<span style="color:#f92672">[</span>ip<span style="color:#f92672">]</span>:<span style="color:#f92672">[</span>port<span style="color:#f92672">]</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -v /etc/fontinassData:/data <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -v /path/to/your/fonts:/fonts <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  riderlty/fontinass:latest
+</span></span></code></pre></div><p>当然也可以使用我自己写得compose模板：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">fontinass</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">riderlty/fontinass:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">fontinass</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8012:8012&#34;</span> <span style="color:#75715e"># 后续访问emby/jellyfin的实际地址</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">EMBY_SERVER_URL=http://[ip]:[port]</span> <span style="color:#75715e"># emby/jellyfin服务器地址</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/fontInAss/data:/data</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/fontInAss/fonts:/fonts</span> <span style="color:#75715e"># 完整字体文件位置，子集化所需的原始字体都会从这个地方抽取</span>
+</span></span></code></pre></div><blockquote>
+<p>​<code>EMBY_SERVER_URL</code>：自己的emby/jellyfin服务器地址，最好用<code>http</code>链接。</p></blockquote>
+<p>我们把一些搜罗到的原始、完整字体仍在映射<code>/fonts</code>的路径即可。我个人是推荐vcb的<a href="https://vcb-s.com/archives/1114">超级字体整合包</a>。</p>
+<p>这样就大功告成，后续访问映射了该docker的<code>8012</code>的端口就ok了，fontInAss会自动实时处理子集化，<strong>口口口</strong>问题也成功被解决。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/07/13/m052ja-0.png" alt=""></p>
+<h1 id="结尾">结尾</h1>
+<p>虽然问题不大，但是迅速解决还是很有成就感的。这次也是在github上找到具体的解决办法，而且听闻前段时间github有了10亿个仓库，再次不得不感慨github的哆啦a梦属性。</p>
+<p>不多说，继续看番，<strong><del>摇曳露营真好看啊。</del></strong></p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://cyilin36.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/toc.css' />
+
+  
+</div>
+
+  
+</body>
+
+<script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://cyilin36.github.io/js/search.js'></script>
+
+
+
+</html>

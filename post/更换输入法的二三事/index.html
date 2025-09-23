@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://cyilin36.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/syntax.css' />
+    <title>更换输入法的二三事 - cyilin&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/favicon.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    
+
+    
+    <meta name="description"
+  content="阿三写的代码简直就是狗屎" />
+<meta name="keywords"
+  content='' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cyilin36.github.io/post/%E6%9B%B4%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="更换输入法的二三事 - cyilin&#39;s blog" />
+<meta name="twitter:description"
+  content="阿三写的代码简直就是狗屎" />
+<meta name="twitter:site" content="https://cyilin36.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://cyilin36.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="更换输入法的二三事 - cyilin&#39;s blog">
+<meta property="og:description"
+  content="阿三写的代码简直就是狗屎" />
+<meta property="og:url" content="https://cyilin36.github.io/post/%E6%9B%B4%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/" />
+<meta property="og:site_name" content="更换输入法的二三事" />
+<meta property="og:image"
+  content="https://cyilin36.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2025-08-09 20:32:08 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://cyilin36.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://cyilin36.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://cyilin36.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://cyilin36.github.io/">cyilin</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="https://cyilin36.github.io/post/%E6%9B%B4%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/">更换输入法的二三事</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Sat, 09 Aug 2025 20:32:08 &#43;0800"
+                    class="no-wrap">
+                    Sat, 09 Aug 2025 20:32:08 &#43;0800</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:16:31 &#43;0800"
+                    class="no-wrap">
+                    Wed, 24 Sep 2025 01:16:31 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      2844 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h1 id="前言">前言</h1>
+<p>总所周知，美化的尽头是默认，这句话放在输入法中也不例外。为了追求简洁、方便，我在几年前便是放弃学生时代使用过的各种输入法，转而投入微软拼音输入法的怀抱——有什么是比系统自带的输入法还要简洁、开箱即用的呢？</p>
+<p>微软输入法陪伴了我相当长的时光，我对它几乎没什么不满意，它完美符合我对一个输入法的所有追求：随着输入自动建立词库、没有乱七八糟的功能、简介的ui设计。而且Windows11的输入法皮肤也让我非常满意。</p>
+<p><img src="https://easyimage.cyilin.top:10086/i/2025/08/09/mxzq3-0.png" alt="">​</p>
+<p><strong>But！</strong> 欢乐的时光总是有限的，故事，要在那个让我至今都后悔不已的夜晚讲起。</p>
+<h1 id="惨遭毒手">惨遭毒手</h1>
+<p>那天晚上我打完游玩，正准备关机睡觉。但是此时我发现系统居然自动给我下载了最新的系统更新。要知道当时的Windows11只出了短短几年，还有不少bug需要修，于是我都不带犹豫，果断进行了更新重启，把系统更新到最新的Windows11 24H2。</p>
+<p>在我更新完系统后，测试完各种东西后觉得毫无大事，于是安心睡觉。在接下来的数天我也没有察觉什么异常。直到那一天，我准备写一份报告时，觉得我怎么老是按错输入法，弄得我写文档的时候很烦躁。</p>
+<p>在后来再一次的频繁输入错误后，我才发觉，系统的输入法居然会<strong>自动切换！我切换了一下窗口，系统就会自动把输入法切换到英文模式！</strong></p>
+<p>虽然我知道Windows更新是什么尿性，但是我没想到好好的输入法都能被更新坏了。</p>
+<h1 id="寻找解决办法">寻找解决办法</h1>
+<p>没办法，输入法还是要用的。我于是在网上寻找各种办法，有的说重新设置&quot;每个应用窗口使用不同的输入法&quot;即可，也有的人说在桌面切换的页面新建一个桌面，随后切换成中文输入模式便可。但是这些办法要不就不管用；要不就是关机就失灵，下次开机得再来一次。</p>
+<p>最后是<a href="https://www.bilibili.com/opus/835887067755970598">b站</a>上找到相关的解决办法：将输入法的<strong>兼容性</strong>选项打开，回到老版本的Windows10输入法。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/09/1pz334-0.png" alt=""></p>
+<p>这种办法虽然确实是可以解决这个bug，但是老版本的皮肤让我看着心里就膈应，个人认为完全比不上新版的ui。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/09/1q6eko-0.png" alt=""></p>
+<p>而且老版本输入法甚至一度出现了候选词无法出现，只能盲打的bug，让我以为是浏览器或者自己的程序问题，用得太糟心了。不过当时我对微软的信心尚存，而且看到了不少就此bug提交的反馈，乐观的认为bug应该果断时间就可以解决。</p>
+<h1 id="我真是个笨蛋啊">&ldquo;我真是个笨蛋啊！&rdquo;</h1>
+<p>我是真的没想到，一个破输入法bug居然需要登上一年时间才能够得到解决的更新推送，真是想要大骂阿三程序员。不过等来了更新也是苦尽甘来&hellip;&hellip;<strong>吗？</strong></p>
+<p>在我兴冲冲的下载完后测试，得出了一个令人绝望的事实：bug似乎并没有得到完全的修复，至少在我这里测试的结果跟之前完全一样的。此时我是真的想要扭一个新房45°，说一句名台词：&quot;<strong>我真是个笨蛋啊！</strong> &quot;</p>
+<p>不甘心的我再度搜寻方法，还尝试在github上找相关的修复补丁，也确实是找到且试用了。<a href="https://github.com/mbbill/no_english_mode">mbbill/no_english_mode: 防止微软拼音输入法启动切换到英文模式</a></p>
+<p>然而造成的结果便是——我的输入法不会自动切换成英文了，而是<strong>自动切换成中文</strong>了。</p>
+<p><strong>——这下我悬着的心终于是死了。</strong></p>
+<h1 id="当你无法解决问题可以尝试解决出问题的人">当你无法解决问题，可以尝试解决出问题的人</h1>
+<p>道路千万条，我终于是起了使用别家输入法的心，不想再读浪费精力在这种破事情上了。便开始在网上查找合适的输入法。</p>
+<h2 id="一探搜狗">一探搜狗</h2>
+<p>我第一个想起的便是学生时代用的输入法：<strong>搜狗输入法</strong>——这玩意在公司的不少电脑上都列装了。旧时光或许是给它蒙上了一层美好的滤镜，以至于我直接重进官网下载，而没有去搜索它现在的风评。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/rk41i-0.png" alt=""></p>
+<p>下载、双击打开、同意协议&hellip;.安装过程一气呵成，全程不到三分钟时间，速度飞快。</p>
+<p>在我兴冲冲的度过了一段码字时光后，我的心情发生了180°大转弯，宛如看到年少时出国留学的白月光回国后满身都是纹身而且吃喝嫖赌样样齐全一样</p>
+<p><strong>——已经变成陌生的样子了。</strong></p>
+<p>我是真的不明白，为什么一个输入法里面要接入所谓的AI大模型，这有啥质一样的提升吗？能帮助用户提升码字、肝代码的效率吗？为什么要塞一堆诸如截图助手、PDF查看器之类跟输入法完全搭不上边的东西？而且我使用的时候还提示需要开会员？最不能忍受的是把<code>/?</code>键改成<code>、</code>键且没有选项可以更改回去，只能掐着鼻子继续用。</p>
+<p>在我使用了两天后终于是爆发了，果断卸载搜狗输入法。跟微软那种屎中带金的味道不同，这玩意是猫屎裹着狗屎</p>
+<p><strong>——全部都是屎！</strong></p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/1q4n11-0.jpg" alt=""></p>
+<h2 id="二探rime">二探RIME</h2>
+<p>在b站搜索输入法推荐的时候，无意中看到这样一款输入法：它开源免费，简洁无广告，而且还有着相当强大的自定义功能，是一个纯粹的输入法软件，它就是**<a href="https://rime.im/">RIME | 中州韻輸入法引擎</a>**​<a href="https://rime.im/">。</a>‘</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/ulrvf-0.png" alt=""></p>
+<p>有了上次的经验，这次我提前搜索如何配置，并且下载了其他人分享的<a href="https://github.com/amzxyz/rime_wanxiang">预设</a>。这下算是万无一失了。</p>
+<p>下载、安装、文件解压覆盖&hellip;.在跟着忙活了近10分钟后才装上了输入法。一使用，果然是非同凡响，但是在几分钟后就发现了一个新的问题：这玩意貌似不会自动给我建立一个个人的词库啊，我重复打了这么多次的词语都没有给我在候选词中排到前列，而一个优秀的个人词库有提升效率是不言而喻的。</p>
+<p>最终，RIME输入法也不太合适我。它的高度可自定义和丰富的预设很强大也很适合这条的人，但是对于已经身心俱疲的我还是太过于复杂了。</p>
+<h2 id="最终的选择">最终的选择</h2>
+<p>本着“群众的眼光是雪亮的”“要相信人民的智慧”的精神，我还是决定求助于和我使用环境类似的人。于是我便在最近常刷的<a href="https://linux.do/">Linux do</a>论坛发布了求助帖子，微信输入法便是在这是映入了我的眼帘。</p>
+<p><a href="https://z.weixin.qq.com/">微信输入法</a>传言是微信读书团队做的输入法，名字上虽然带着“微信”二字，但却不像是微信一眼臃肿，反而透露着一股清爽、简洁的味道。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/6ruc4-0.png" alt=""></p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/lp3dk-0.png" alt=""></p>
+<p>它虽然没有微软输入法和rime输入法一样纯粹和简洁，但是也差不了多少，跟搜狗之流那是云泥之别。经过简单设置后，它在使用上可以非常接近原生的微软输入法。只需要按照图片上进行设置一下便可以了。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/bc290-0.png" alt=""></p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/bi8mc-0.png" alt=""></p>
+<p>并且它还解决和改进了一些微软输入法的痛点，比如：在<code>输入&gt;默认输入语言</code>中可以设置始终使用英文标点符号。这对于特定场景非常有用，例如~~<strong>写点代码的时候便不用担心标点符号输入错误导致排查半天的问题。</strong>~~</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/dqkc6-0.png" alt=""></p>
+<p>如果多设备统一安装了微信输入法，那就可以通过<code>跨设备</code>将设备的输入法串联起来，将个人词库、复制粘贴进行同步，非常方便，省下了我打开LocalSend的功夫。</p>
+<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/08/10/kvkac-0.png" alt=""></p>
+<p>并且这种同步是不需要账户，只需要手机输入一下配对码即可。如果还是担心隐私泄露，它也贴心的给了单机模式。</p>
+<p>这么一看，对比搜狗输入法显得无比简洁，没有把各种工具一股脑的塞进用户电脑，而且贴心的给出了开关；对比rime则是显得设置方便，不需要对着yaml文件自己一点一点的编写配置，非常开箱即食，自然是一下子就俘获了我的心。</p>
+<p>只是它不能像是微软输入法一样把上下方向键作为候选词选择键让我有点不习惯以外，其他的简直就是完美。我直接将手头的所有设备都换成微信输入法了，美滋滋。</p>
+<h1 id="结尾">结尾</h1>
+<p>一个输入法让我烦恼了一整年，如今更是意识到直接更新到最新系统等于帮微软做无偿小白鼠。或许我应该学Linus一样，说出一句：</p>
+<p><strong>“Fuck you,Microsoft！”</strong></p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://cyilin36.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/toc.css' />
+
+  
+</div>
+
+  
+</body>
+
+<script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://cyilin36.github.io/js/search.js'></script>
+
+
+
+</html>
