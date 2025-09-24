@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:10:34 &#43;0800"
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 10:45:55 &#43;0800"
                     class="no-wrap">
-                    Wed, 24 Sep 2025 01:10:34 &#43;0800</relative-time>
+                    Wed, 24 Sep 2025 10:45:55 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -205,13 +205,13 @@
 <p>在这里，我的方案是<strong>办公一套，游戏一套</strong>。</p>
 <h2 id="办公选择远程桌面">办公选择——远程桌面</h2>
 <p>上述提到过，Windows其实自带了一套远程桌面<code>RDP</code>，远程桌面的控制端在家庭版便可以任意使用。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1pmh87-0.png" alt=""></p>
+<p><img src="/images/20250924102521.png" alt=""></p>
 <p>而被控端则是需要起码专业版方可开启。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1po48c-0.png" alt=""></p>
+<p><img src="/images/20250924102526.png" alt=""></p>
 <p>因此推荐大伙升级到专业版会比较好。</p>
 <p>被控端开启该功能后，我们只需要在控制端的电脑上搜索远程桌面连接，输入被控端的ip地址便可以直接远程控制了。手机端则是安装<strong>Windows app</strong>，然后按照电脑端一样输入ip地址即可实现远控。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1pyff9-0.png" alt=""></p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1q0i8f-0.png" alt=""></p>
+<p><img src="/images/20250924102534.png" alt=""></p>
+<p><img src="/images/20250924102546.png" alt=""></p>
 <blockquote>
 <p>RDP会占用3389端口，但是远程桌面软件可以通过输入ip:端口的方式来选定端口。</p></blockquote>
 <h2 id="游戏选择日月组合">游戏选择——日月组合</h2>
@@ -225,18 +225,18 @@
 </ol>
 <h3 id="sunshine部署">SunShine部署</h3>
 <p>sunshine是作为服务器、被控端安卓的软件，我使用的是<a href="https://docs.qq.com/aio/DSGdQc3htbFJjSFdO?p=DXpTjzl2kZwBjN7jlRMkRJ">基地版</a>)。该版本有着最大的优点便是集合了虚拟显示器，串流的时候物理显示器可以自动熄屏，<strong><del>大大降低了玩黄油时候被舍友发现的风险</del></strong>，实在是保护隐私的利器。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1q2qor-0.png" alt=""></p>
+<p><img src="/images/20250924102553.png" alt=""></p>
 <p>作者的教程其实非常全面且详细，这里就不再重复赘述，值得注意的是笔记本用户需要注意设置一下<strong>核显和独显</strong>。</p>
 <h3 id="moonlight">moonlight</h3>
 <p>moonlight分为移动端和电脑端，移动端又分为ios和安卓。由于我本人使用的手机是小米，因此这里只能分享安卓的，ios端在基地版的教材中有介绍，但本人并未使用过。</p>
 <ul>
 <li>
 <p>安卓端我本人推荐使用<a href="https://github.com/ClassicOldSong/moonlight-android">Apollo</a>的改版。这个版本最吸引我的地方便是内置了一个虚拟基盘，在应急的时候——比如输入密码，非常方便。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1q4jzm-0.png" alt=""></p>
+<p><img src="/images/20250924102608.png" alt=""></p>
 </li>
 <li>
-<p>pc端使用的则是<a href="https://moonlight-stream.org/">官网</a>的版本，理由非常简单：<del>没有找到其他的改版，只好用原版了。</del></p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1q6hoq-0.png" alt=""></p>
+<p>pc端使用的则是<a href="https://moonlight-stream.org/">官网</a>的版本，理由非常简单：<del>没有找到其他的改版，只好用原版了。</del>
+<img src="/images/20250924102616.png" alt=""></p>
 </li>
 </ul>
 <p>它们使用也非常简单，跟<code>rdp</code>一样，输入ip即可访问。</p>
@@ -249,7 +249,7 @@
 <p>然而实际情况是残酷的，国内的互联网用户有90%的用户都是没有公网的，即使有也只是不但长而且还会随时会变化的<strong>ipv6</strong>；普通用户非常难申请<strong>ipv4</strong>，即使申请到说不定也是动态的。</p>
 <p>不过好在国内在逐步推进ipv6的普及，新建的宽带基本都自带<strong>公网ipv6</strong>，哪怕是老宽带也能轻松的开启。因此我们可以借助ddns，通过域名来实时获取ipv6的地址。</p>
 <p>在之前的博客开头就有如何进行ddns的操作，跟着操作即可。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1q9aca-0.png" alt=""></p>
+<p><img src="/images/20250924102644.png" alt=""></p>
 <p>DDNS设置完成后，我们在moonlight端输入设置好的域名即可成功连接。</p>
 <blockquote>
 <p>这次只会说通过域名来获取ip地址，因此对于ssl证书可以无视。</p></blockquote>
@@ -257,7 +257,7 @@
 <p>如果没有公网，那么自然就剩下内网这一个方案。</p>
 <p>内网穿透的定义非常广，方法也有很多，比如单纯的中继——通过一台带有公网ip的设备将流量进行直接转发、点对点穿透——通过一台公网服务器将两台子设备进行连接，本身不参与流量转发等等。</p>
 <p>由于公网服务器的网络资费等问题我还是选择了点对点穿透，并选择免费的zerotier进行搭建，在之前的博客也有讲述，跟着操作即可。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qitt4-0.png" alt=""></p>
+<p><img src="/images/20250924102649.png" alt=""></p>
 <h1 id="后话">后话</h1>
 <p>串流大半的困难其实都是网络传输的问题，单纯的控制端和被控端其实非常简单。而且串流经过网络、本地视频解码等一系列延迟，可不可用还得另说。</p>
 <p>如果网络质量稍微差一点、延迟稍微高一点，那么对于需要高灵敏度的游戏而言就非常吃力了，因此能不能用属于仁者见仁智者见智的问题。不过对于我这种不玩fps的人刚刚好，靠这一套让我在外地酒店的晚上都可以舒服的玩到电脑存的GalGame，单论这一点就让值得让我费力去折腾了。</p>

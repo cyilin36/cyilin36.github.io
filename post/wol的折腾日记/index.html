@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:09:50 &#43;0800"
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 10:45:55 &#43;0800"
                     class="no-wrap">
-                    Wed, 24 Sep 2025 01:09:50 &#43;0800</relative-time>
+                    Wed, 24 Sep 2025 10:45:55 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -205,8 +205,8 @@
 <p>因此我一开始的思路是买一个智能、可以联网开关的插座，对电脑实行物理层面的通断电而达到远程开关机的目的。</p>
 <p>主板的通电自启功能一般是默认关闭的，因此我们需要提前在主板中打开。我们只需要在bios中开启即可。每个厂家的bios不同，开启方式也不一样，但是基本都大同小异，例如在华硕主板中，在bios进入到<strong>Advanced Mode</strong>，在<strong>Advanced</strong>选项卡中点开<strong>高级电源管理</strong>，将<strong>断电恢复改为电源开启</strong>即可。</p>
 <p>接下来只要找一个好用的智能插座即可。一开始我瞄准的米家的智能开关插座（毕竟现在用的小米手机）</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv4frg-0.png" alt=""></p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv4z4f-0.png" alt=""></p>
+<p>​<img src="/images/20250924100125.png" alt=""></p>
+<p><img src="/images/20250924100144.png" alt=""></p>
 <p>但！！！看着者这50元的售价，我的荷包在告诉我一定有其他更好的办法！对于家庭nas都是靠捡垃圾配出来的我，这么高端的插座显然不怎么符合我的气质（不是）。</p>
 <p>既然已经装了nas，那为何不在nas上作文章呢？</p>
 <h1 id="wake-on-lan网络唤醒">Wake On Lan——网络唤醒</h1>
@@ -216,14 +216,14 @@
 <p>使用之前是一样要到bios中开启，跟之前<strong>通电自启</strong>一样，每个主板商的开启方式都不一样，但大同小异。还是以华硕主板举例：在bios进入到<strong>Advanced Mode，</strong> 点击<strong>APM Configuration，</strong> 并将<strong>Power On By PCI-E</strong>改为<strong>Enabled</strong>即可。</p>
 <p>改完bios后，我们还需要在Windows中设置一下方可。</p>
 <p>我们在<strong>设备管理器</strong>中打开<strong>网络适配器</strong>，右键你的<strong>网卡</strong>，点击<strong>属性</strong></p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv5vh9-0.png" alt=""></p>
+<p><img src="/images/20250924100153.png" alt=""></p>
 <p>点击高级选项卡，选到魔术封包唤醒，并设置为开启</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv4ndv-0.png" alt=""></p>
+<p><img src="/images/20250924100201.png" alt=""></p>
 <p>至此，被控端的设置便全部设置完成。接下来就要找一个合适的设备进行安装wol客户端，让这台设备发送数据包便可以远程唤醒了。而合适的设备——那自然是二十四小时不关机的设备啦。</p>
 <h2 id="openwrt-wol">openwrt wol</h2>
 <p>说到24小时不关机的智能设备，大多数人家里那肯定是路由器。而我正好有一台刷了openwrt的旁路由。</p>
 <p>我们进入openwrt的后台，找到<strong>网络唤醒</strong>，然后选择进入被控设备的<strong>ip/mac地址</strong>，最后点一下<strong>唤醒主机</strong>即可。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv4inj-0.png" alt=""></p>
+<p><img src="/images/20250924100220.png" alt=""></p>
 <h2 id="docker-wol-go-web">Docker wol-go-web</h2>
 <p>唉，每次都要选择地址，好麻烦的，还有没有更方便，真正一键启动的办法呢？</p>
 <p><strong>有的兄弟，包有的。</strong></p>
@@ -274,17 +274,17 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># entrypoint: /bin/sh -c &#34;apk update &amp;&amp; apk add --no-cache &lt;YOUR_PACKAGE&gt; &amp;&amp; rm -rf /var/cache/apk/* &amp;&amp; ./upsnap serve --http 0.0.0.0:8090&#34;</span>
 </span></span></code></pre></div><h3 id="upsnap-开机">upsnap 开机</h3>
 <p>部署完成后在浏览器输入<code>http://服务器IP或域名:8090</code>即可进入upsnap的webui后台。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv4im1-0.png" alt=""></p>
+<p><img src="/images/20250924100338.png" alt=""></p>
 <p>点击右上角<strong>新增，</strong> 并输入<strong>备注、ip、mac地址、子网掩码</strong>便可</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv63ib-0.png" alt=""></p>
+<p><img src="/images/20250924100241.png" alt=""></p>
 <p>当然，你也可以点击网络扫描，设定好ip网段以后便可以自动识别添加</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv4mse-0.png" alt=""></p>
+<p><img src="/images/20250924100236.png" alt=""></p>
 <h3 id="upsnap-关机">upsnap 关机</h3>
 <p>对于关机而言，我们需要额外设置一番。Windows端最好是安装并启用openssh。</p>
 <p>进入到<code>设置&gt;系统&gt;可选功能&gt;添加可选功能</code>，点击<strong>查看功能</strong>，搜索并安装<strong>openssh</strong></p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv5wzv-0.png" alt=""></p>
+<p><img src="/images/20250924100455.png" alt=""></p>
 <p>设置完成以后，我们回到upsnap，在关机指令中输入<code>sshpass -p &quot;你的电脑密码&quot; ssh -o &quot;StrictHostKeyChecking=no&quot; 你的电脑账号@电脑局域网ip &quot;shutdown /s /t 0 /f&quot;</code>​</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sv6565-0.png" alt=""></p>
+<p><img src="/images/20250924100435.png" alt=""></p>
 <p>最后拉到最下面点击保存即可。</p>
 <p>现在，你用其他设备登陆upsnap，就可以远程控制开关机啦。</p>
 </article>

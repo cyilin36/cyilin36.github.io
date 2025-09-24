@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:10:17 &#43;0800"
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 10:45:55 &#43;0800"
                     class="no-wrap">
-                    Wed, 24 Sep 2025 01:10:17 &#43;0800</relative-time>
+                    Wed, 24 Sep 2025 10:45:55 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -216,8 +216,8 @@
 <p>既然我对密码的态度是<strong>本地优先</strong>，自然不可能用 Bitwarden 的官方服务，必须自己动手自建一个。Bitwarden 提供了简单方便的 Docker 自托管方案，这也是我选择它的重要原因。</p>
 <h2 id="自托管服务端">自托管服务端</h2>
 <p>server端有两个选择，一个是官方的<a href="https://github.com/bitwarden/server">bitwarden/server</a>，一个是非官方的<a href="https://github.com/dani-garcia/vaultwarden">dani-garcia/vaultwarden</a>。我是选择vaultwarden，毕竟github的star数是不会骗人的。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qp1lp-0.png" alt=""></p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qpv7n-0.png" alt=""></p>
+<p><img src="/images/20250924102134.png" alt=""></p>
+<p><img src="/images/20250924102142.png" alt=""></p>
 <p>在进行搭建之前，我们还需要准备以下东西：</p>
 <ul>
 <li>个人域名</li>
@@ -250,28 +250,28 @@
 <p><code>SIGNUPS_ALLOWED</code>参数默认是<code>true</code>，允许新用户进行注册。在<strong>开始之前都必须删除该项参数或者将参数设置为<code>true</code></strong>，不然连自己也无法进行注册，右上角会弹出相应的报错。后续想一个人用，只需将<code>true</code>改为<code>false</code>即可。</p>
 <h3 id="建立账户">建立账户</h3>
 <p>我们需要在这里建立一个自己使用的账户，密码设置一个自己一定可以记得住/记载手机里面的强密码即可，以后基本上只需要记住这一个密码就完全搞定了。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qqlup-0.png" alt=""></p>
+<p><img src="/images/20250924102151.png" alt=""></p>
 <h3 id="新增密码">新增密码</h3>
 <p>视线来到右上角“<strong>新增</strong>”，点击即可出现各种密码类型，我相信各位最常用的应该就是<strong>登录</strong>这一个功能了。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qrm38-0.png" alt=""></p>
+<p><img src="/images/20250924102157.png" alt=""></p>
 <p>页面非常直白，一步一步照着填即可。网站可以多选，理论上你可以将各种不同网站但都是同一套账号密码存放在同一个项目里，不过都搭建密码库了，我相信大家还是不会做这种浪费时间和金钱的事。</p>
 <p>值得注意的是，默认的网站识别也是基于基础域名，也就是主域名，这一点跟edge等一众浏览器自带的密码管理器是一样的。点击后方的<strong>齿轮</strong>样式图标即可<strong>匹配检测</strong>更改检测机制。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qsr68-0.png" alt=""></p>
+<p><img src="/images/20250924102205.png" alt=""></p>
 <p>对于跟我一样多个同一个主域名下有数个子域名，且子域名服务所需的账户和密码都各不相一的情况，可以考虑将匹配检测改为<strong>主机</strong>，这样bitwarden客户端识别到符合的子域名时就能正确的显示密码，</p>
 <p>**——再也不用忍受edge一次弹出数个毫无相关的密码选项了。</p>
 <h3 id="转移密码">转移密码</h3>
 <p>不得不说，导出密码库是一个好文明，跟导出收藏夹一样，大大降低了更换密码管理器的成本。</p>
 <p>这里只说edge浏览器的操作，其他浏览器照葫芦画瓢的操作即可。我们只需进入到<strong>设置&gt;密码和自动填充&gt;Microsoft 密码管理器</strong>，点击“<strong>密码</strong>”右边的三个点，选择<strong>Export passwords</strong>，即可得到一份非常完整的csv密码文件。如果后续不在需要edge的密码管理功能，那么此时也可以顺手将“<strong>请求保存密码</strong>”关闭，并将自己的密码逐个删除。</p>
 <p>回到vaultwarden页面，点击<strong>工具&gt;导入密码</strong>，选择刚刚导出的csv文件，并在上方的<strong>文件格式</strong>选择egde，然后点击<strong>导入数据</strong>即可。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qtmq1-0.png" alt=""></p>
+<p><img src="/images/20250924102211.png" alt=""></p>
 <h2 id="客户端">客户端</h2>
 <p>服务端大致操作说完，接下来就是万众瞩目的客户端了。毕竟只有好的客户端才能真正发挥密码库的实力，光有服务端的bitwarden还不如备忘录来的方便。</p>
 <p>我们进入到<a href="https://bitwarden.com/">bitwarden</a>的主页，点击<strong>Download</strong>，便可下载到各种浏览器插件和各大系统的客户端。</p>
 <p>以浏览器插件为例，我们需要下方的“<strong>正在访问</strong>“选择”<strong>自托管</strong>“，并填写<strong>自己设置的vaultwarden的域名</strong>。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qu60z-0.png" alt=""></p>
+<p><img src="/images/20250924102216.png" alt=""></p>
 <p>登录成功后，我们便可以在客户端上同步进行密码的更新、增加、删减，它会自动上传到服务端并同步到其他客户端，达成真正的<strong>一端多用</strong>。</p>
 <p>不过由于默认的密码库超时时长太短，导致每次都得先输入一次主密码，这低于平时习惯edge密码管理的我来说极度不方便，因此我会在自己觉得”信的过且绝对不会丢失“的设备将密码库超时的时间改为”<strong>从不</strong>“，这样基本就获得了和以前没什么两样的体验了。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/1qvawj-0.png" alt=""></p>
+<p><img src="/images/20250924102221.png" alt=""></p>
 <p>值得一提的是edge的手机版本其实也可以根据上述的类似操作关闭自带密码保存，并安装手机浏览器版本的扩展，这样的也可以获得一个非常棒的使用体验。这点也是我在手机版本越做越垃圾的今天还在坚持使用edge的原因。</p>
 <h1 id="尾声">尾声</h1>
 <p>在三年前我还对浏览器的密码管理大为赞叹并大力加以使用，没想到三年后的我居然会不满于此。写到这里突然想到，这算是对美好生活的进一步追求？还是算对为满足自身欲望的有一次行动？</p>

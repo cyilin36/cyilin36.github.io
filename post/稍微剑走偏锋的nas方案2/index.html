@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:15:13 &#43;0800"
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 10:45:55 &#43;0800"
                     class="no-wrap">
-                    Wed, 24 Sep 2025 01:15:13 &#43;0800</relative-time>
+                    Wed, 24 Sep 2025 10:45:55 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -219,46 +219,46 @@
 <h3 id="购买">购买</h3>
 <p>个人域名的获取需要到各家互联网域名商去购买，我这边使用的是<a href="https://www.aliyun.com/">阿里云</a>。</p>
 <p>我们首先进入阿里云官网并注册登陆，然后再搜索栏搜索<code>域名注册</code>​</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s63y1v-0.png" alt=""></p>
+<p>​<img src="/images/20250924102824.png" alt=""></p>
 <p>然后搜索你想要建立的域名，比如<code>asdadsahdah</code>​</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s64osx-0.png" alt=""></p>
+<p>​<img src="/images/20250924102830.png" alt=""></p>
 <p>挑选一个还未注册且价格便宜的入手即可，比如<code>asdadsahdah.top</code>。</p>
 <h3 id="网站权限的账户密码获取">网站权限的账户密码获取</h3>
 <p>购买成功后，我们点击右上角<code>控制台&gt;全部域名&gt;域名列表</code>，确认购买的域名。确认入库后，点击<code>右上角头像&gt;AccessKey</code>，然后勾选提示并点击<code>继续使用云账号AccessKey</code>。</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s63nxd-0.png" alt=""></p>
+<p>​<img src="/images/20250924102836.png" alt=""></p>
 <p>接着点击<code>创建AccessKey</code>，然后完成一系列验证后就可以拿到一个<strong>AccessKey ID</strong>和<strong>AccessKey Secret</strong>。<strong>请保管好这AccessKey ID和AccessKey Secret，拿到的人相当于对该网站拥有实际控制权！一定要保管好且不要泄密，就和你的steam号不外借是同一个道理！</strong> 我们要复制好AccessKey ID和AccessKey Secret，这两个在关闭页面就无法在看到了，因此要提前存放好。</p>
 <h2 id="ddns软件的选择">DDNS软件的选择</h2>
 <p>DDNS软件的选择有很多，比如<a href="https://github.com/jeessy2/ddns-go">ddns-go</a>，<a href="https://github.com/gdy666/lucky">lucky</a>等，这边使用对windows操作更加顺手的lucky来作为演示。</p>
 <p>我们下载完lucky并安装在nas上以后，启动lucky，并在右下角小图标处右键lucky图标，设置为<code>开机自启动</code>，然后点击<code>打开lucky后台</code>进入到webui页面</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s64bxs-0.png" alt=""></p>
+<p><img src="/images/20250924102840.png" alt=""></p>
 <p>我们输入账号和密码（默认都是：<code>666</code>），点击<code>设置</code>，把管理账号和密码修改成你自己的。<strong>外网访问</strong>按需打开。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s63y2c-0.png" alt=""></p>
+<p><img src="/images/20250924102844.png" alt=""></p>
 <p>设置好并重新登陆lucky后台，我们点击<code>动态域名&gt;添加任务</code>，然后把相关信息填写上，域名写刚刚购买的域名，AccessKey ID和AccessKey Secret就填写刚刚建立的。类型选择上如果有公网ipv4就选择公网ipv4，有公网ipv6就选择公网ipv6，都有的话建议多添加一次任务，把ipv4和ipv6都解析了。</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s7tt9l-0.png" alt=""></p>
+<p>​<img src="/images/20250924102849.png" alt=""></p>
 <p>注意：我们购买的域名一般都是主域名，子域名是挂载在主域名下的，不需要额外购买，因此我们可以在<strong>域名列表</strong>处写入子域名。</p>
 <p>子域名命名规则其实很简单，组合方式为：<code>你要的域名名称.主域名</code>，和之前一样，比如我购买的主域名为<code>asdadsahdah.top</code>，那么子域名我可以设置为<code>abc123.asdadsahdah.top</code>，其中这个<code>abc123</code>可以是任何英文和数字。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s646pq-0.png" alt=""></p>
+<p><img src="/images/20250924102853.png" alt=""></p>
 <p>都填入正确并添加成功后应该可以看到这个页面</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s6461j-0.png" alt=""></p>
+<p>​<img src="/images/20250924102858.png" alt=""></p>
 <p>可以看到<strong>公网ip未改变</strong>或者<strong>成功上传ip</strong>的相关字样</p>
 <h2 id="远程访问nas">远程访问nas</h2>
 <p>现在我们已经成功将ip和域名配置成功，那么就可以来访问测试一下。在浏览器输入<code>域名:端口</code>即可访问。前文我安装了飞牛os和emby服务器，运行的端口号分别是<code>5666</code>和<code>8096</code>，那么我在浏览器输入<code>域名:5666</code>和<code>域名:8096</code>既可。</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/s647xe-0.png" alt=""></p>
+<p>​<img src="/images/20250924102902.png" alt=""></p>
 <h2 id="ssl证书">SSL证书</h2>
 <p>我们上面的一系列操作完成后都只是能在<code>http</code>上访问，而<code>http</code>在现在互联网中其实相当于明文传输，相当不安全，因此建议加上SSL证书来达成<code>https</code>访问。至于SSL是什么东西，请看下面的文章：</p>
 <p><a href="https://baike.baidu.com/item/SSL%E8%AF%81%E4%B9%A6/5201468">SSL证书——百度百科</a></p>
 <h3 id="添加ssl证书">添加SSL证书</h3>
 <p>之所以前面选择lucky作为ddns软件，就是因为它不单止可以作为ddns转发，还可以帮我们续签SSL证书。我们点击<code>SSL/TLS证书&gt;添加证书</code>，添加方式选择<code>ACME</code>，证书机构推荐使用<code>Let's Encrypt</code>，验证方式选择<code>阿里云</code>（在什么地方买得域名就选择什么），<strong>ID</strong>和<strong>Secret</strong>写入之前获取的AssessKey，域名写入刚刚ddns设置的域名（比如前文的<code>abc123.asdadsahdah.top</code>），也可以写入你的<code>主域名</code>和<code>*.主域名</code>（比如<code>asdadsahdah.top</code>和<code>*.asdadsahdah.top</code>）</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkfb2-0.png" alt=""></p>
+<p>​<img src="/images/20250924102907.png" alt=""></p>
 <h3 id="反向代理">反向代理</h3>
 <p>添加完SSL证书后，我们还需要设置反向代理，把<code>https</code>的域名指向本机的ip</p>
 <p>我们点击<code>web服务&gt;添加web服务规则</code>，设置一个端口号，然后把<code>TLS</code>打开。接着点击<code>添加子规则</code>，前端地址写入<strong>ddns设置的域名，</strong> 后端地址写入<code>本机ip:端口</code>，在点击<code>添加web服务规则</code>即可。</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sblg42-0.png" alt=""></p>
+<p>​<img src="/images/20250924102912.png" alt=""></p>
 <p>如图，这样一番设置后，我在浏览器输入<code>https://abc123.asdadsahdah.top:10010</code>，先是会通过<strong>ddns</strong>来解析到nas公网ip地址，然后通过lucky的反向代理，<code>10010</code>端口的流量指向<code>192.168.110.1:8096</code>，我们就可以浏览到<code>192.168.110.1</code>这台设备<code>8096</code>端口上的内容了。而前面emby服务是运行在<code>8096</code>端口，因此输入<code>https://abc123.asdadsahdah.top:10010</code>即可远程访问机器上的emby服务器。<del><strong>小姐姐就可以随时随地的来到我们身边了。</strong></del></p>
 <p>反向代理的端口是可以复用的，因此你可以把<code>abc123.asdadsahdah.top:10010</code>指向emby，把<code>gskandp.asdadsahdah.top:10010</code>指向nas系统等</p>
 <h2 id="ipv4和ipv6互不相通">IPV4和IPV6互不相通</h2>
 <p>前面说了，ipv4的网络无法访问只有ipv6地址的网站，反过来也一样，因此你需要确认你的域名和你的流量都支持同一个<strong>网际协议版本</strong>（<strong>I</strong>nternet<strong>P</strong>rotocol<strong>v</strong>ersion，缩写：<strong>ipv</strong>）。如果你和我一样，只有公网ipv6，那么在通过这样的办法连接家里设备之前，先去<a href="https://test-ipv6.cs.umd.edu/index.html.zh_CN">测试一下ipv6</a>吧。</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkph1-0.png" alt=""></p>
+<p>​<img src="/images/20250924102918.png" alt=""></p>
 <p>现在国内的绝大部分手机都是兼容ipv4和ipv6流量的，因此手机流量应该可以直接访问ipv6地址的网页。</p>
 <p>目前阿里云平台的ipv6转ipv4是需按照流量收费的，而赛博善人<strong>cloudflare</strong>则是不用，我们可以免费使用cloudflare的cdn服务来实现<strong>v4v6均可访问。</strong> 但由于cloudflare是美国公司，因此速度方面会比较感人，有舍有得吧。碍于篇幅这里暂且搁置不谈，以后有机会再填坑。 <del><strong>（咕咕咕）</strong></del></p>
 <hr>
@@ -272,9 +272,9 @@
 <p><a href="https://www.zerotier.com/">ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN</a></p>
 <h3 id="设置zerotier局域网">设置zerotier局域网</h3>
 <p>注册并登陆zerotier后，选择<code>free</code>计划，然后我们可以看到这个页面</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkkrt-0.png" alt=""></p>
+<p>​<img src="/images/20250924102924.png" alt=""></p>
 <p>我们点击上面的<code>Create A Network</code>就可以看到下面多出一个条目</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkuvf-0.png" alt=""></p>
+<p>​<img src="/images/20250924102930.png" alt=""></p>
 <p>点击进入后，我们首先来到，我们需要注意以下几个地方</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Network ID    <span style="color:#75715e">#该局域网的识别码，对于任何设备想要添加进入这个虚拟局域网都需要这个ID</span>
 </span></span><span style="display:flex;"><span>
@@ -288,34 +288,34 @@
 </span></span></code></pre></div><h3 id="安装zerotier-docker客户端">安装zerotier docker客户端</h3>
 <p>我们可以到zerotier的<code>Download</code>处下载到相关系统的客户端，想要安装在nas系统里面的可以选择<code>docker</code>版本。以飞牛os的docker为例。</p>
 <p>在docker中搜索并安装zerotier</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkbqe-0.png" alt=""></p>
+<p>​<img src="/images/20250924102935.png" alt=""></p>
 <p>然后建立镜像，记得勾选<code>开机自启动</code>，在<code>存储位置</code>处添加路径映射，把一个你想要放置zerotier文件的文件夹映射<code>/var/lib/zerotier-one</code>文件夹，比如</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbl9pt-0.png" alt=""></p>
+<p>​<img src="/images/20250924102939.png" alt=""></p>
 <p>功能处选择使用<code>高权限执行容器</code>​</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbk8p0-0.png" alt=""></p>
+<p><img src="/images/20250924102943.png" alt=""></p>
 <p>网络选择<code>host</code>（先取消勾选<code>bridge</code>然后再选择<code>host</code>）</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkx13-0.png" alt=""></p>
+<p>​<img src="/images/20250924102947.png" alt=""></p>
 <p>点击<code>设置&gt;SSH</code>，打开<code>SSH功能</code>，我们需要远程ssh来给zerotier容器添加<code>Network ID</code>​</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbksht-0.png" alt=""></p>
+<p>​<img src="/images/20250924102952.png" alt=""></p>
 <p>打开任意一个ssh工具，这边我使用的是<a href="https://mobaxterm.mobatek.net/">MobaXterm</a>。打开MobaXterm，点击<code>Session&gt;ssh</code>，<strong>Remote host</strong>  ***** 输入<code>nas的ip地址</code>​ <em>。</em></p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbk8of-0.png" alt=""></p>
+<p>​<img src="/images/20250924102957.png" alt=""></p>
 <p>nas的ip地址可以再nas的<code>系统设置&gt;网络设置</code>中找到</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbl0tf-0.png" alt=""></p>
+<p>​<img src="/images/20250924103001.png" alt=""></p>
 <p>对着左侧列表的ip地址右键选择<code>Connect as…</code>，然后输入自己nas的账户名，这样就成功连接上nas的ssh</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkln3-0.png" alt=""></p>
+<p>​<img src="/images/20250924103005.png" alt=""></p>
 <p>接下来所有的命令我们需要在<strong>root</strong>权限下，因此我们输入<code>sudo -i</code>，然后输入自己nas的密码来进入到root权限中。<strong>注意，输入密码的时候是不会显示密码的，要盲打</strong></p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbl2j2-0.png" alt=""></p>
+<p>​<img src="/images/20250924103010.png" alt=""></p>
 <p>接下来执行以下操作</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps    <span style="color:#75715e">#查看docker中zerotier容器的名字，可选，其实在fnos中的docker看也一样</span>
 </span></span><span style="display:flex;"><span>docker exec -it zeroier容器名字 zerotier-cli status    <span style="color:#75715e">#查看节点状态，返回 200 info 就算成功</span>
 </span></span><span style="display:flex;"><span>docker exec -it zeroier容器名字 zerotier-cli join zerotierID <span style="color:#75715e">#加入虚拟局域网，zerotierID就是你的Network ID</span>
 </span></span></code></pre></div><p>此时再度进入<a href="https://www.zerotier.com/">zerotier的官网</a>并进入你方才建立的局域网，现在你应该发现就会有一个设备出现在页面上</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbl0wn-0.png" alt=""></p>
+<p>​<img src="/images/20250924103016.png" alt=""></p>
 <p>​<code>Name</code>是给添加进入的设备起名称，可以随意，<code>Managed IPs</code>则是虚拟局域网内的ip，这个ip就是zerotier局域网的ip。这样一台设备就真正的加入到虚拟局域网中了。注意，zerotier局域网的网段和家里真实局域网的网段不能相同。</p>
 <p>可以尝试一下，比如家里的局域网网段是<code>192.168.110.x</code>，zerotier的局域网网段是<code>192.168.193.x</code>，两台设备之间<code>ping zerotierIP</code>可以ping通，就算成功。</p>
 <h3 id="安装zerotier-windows端">安装zerotier Windows端</h3>
 <p>我们还是来到zerotier官网的<code>Download</code>处，选择下载Windows版本</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkqen-0.png" alt=""></p>
+<p>​<img src="/images/20250924103020.png" alt=""></p>
 <p>下载下来应该是一个<code>.msi</code>文件。双击进行安装，安装完毕后在<strong>右下角小图标</strong>出应该可以找到zerotier的图标，接着<code>右键&gt;join new network</code>，弹出的提示框内输入虚拟局域网的<code>Network ID</code>，然后跟上面的一样，在zerotier局域网管理页面运行设备加入即可。</p>
 <h2 id="zerotier-路由转发">zerotier 路由转发</h2>
 <p>其实我们可以更近一步，通过设备的转发功能，<strong>实现一台设备安装zerotier，那么该局域网的所有设备都被添加进zerotier局域网的效果。</strong> 由于本人使用openwrt作为旁路由进行zerotier转发，因此下面举例是基于openwrt的，飞牛OS和Windows的也各自有教程</p>
@@ -325,19 +325,19 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>opkg update    <span style="color:#75715e">#更新软件包</span>
 </span></span><span style="display:flex;"><span>opkg install zerotier    <span style="color:#75715e">#安装zerotier</span>
 </span></span></code></pre></div><p>随后进入openwrt webui，来到<code>VPN&gt;zerotier</code>，把<code>启用</code>打开，并输入局域网的<code>Network ID</code>到<code>ZeroTier Network ID</code>处，并把<code>自动允许客户端 NAT打开</code>，然后选择<strong>保存并应用。</strong></p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbl7r4-0.png" alt=""></p>
+<p>​<img src="/images/20250924103024.png" alt=""></p>
 <p>回到zerotier局域网管理页面，我们找到<code>Settings&gt;Advanced&gt;Managed Routes</code>，在<code>Add Routes</code>进行路由表的配置。<code>Destination</code>输入自己<strong>本地局域网的网段，</strong> 比如我家里的nas ip地址是192.168.110.5，那么我就应该输入<code>192.168.110.0/24</code>。</p>
 <p>​<code>Via</code>则是输入自己想要进行转发的设备，比如我要用opnewrt进行转发，该设备在zerotier的局域网中ip为<code>192.168.193.2</code>，那么就输入<code>192.168.193.2</code>。然后点击<code>Submit</code>来提交。</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbkn53-0.png" alt=""></p>
+<p>​<img src="/images/20250924103028.png" alt=""></p>
 <p>这样我外面的设备连接上zerotier局域网后，输入的设备就直接输入<strong>真实局域网的ip</strong>就可以了，再也不用多记ip且一个一个设备安装zerotier了。</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/06/01/sbl4pw-0.png" alt=""></p>
+<p>​<img src="/images/20250924103033.png" alt=""></p>
 <hr>
 <h1 id="中继转发">中继转发</h1>
 <p>有些nas系统的服务商其实是配置了中继转发的，飞牛的中继转发叫做<strong>FN Connect。</strong> 开启后输入指定连接后边可以直接连接。如果是在同一局域网内，那么它会自动帮你切换成局域网内连接，不然就会通过飞牛的服务器把你的外部设备和nas连接在一起。</p>
 <p>由于是经过了飞牛的服务器，因此速度是有限制的，还是更加推荐zerotier或者是ddns。</p>
 <p>我们进入到<code>设置&gt;设备信息&gt;飞牛账号</code>中，用自己的手机号注册一个飞牛帐户。注册完成后继续来到<code>远程访问</code>中，把<strong>FN ID</strong>输入一个自己的id名（不可跟他人重复），然后打开<strong>FN Connect</strong>即可。</p>
 <p>我们再回到<code>设备信息</code>处，就可以看到<code>FN Connect</code>处有一个连接，这个就是专属连接，直接再浏览器输入便可以连接到飞牛nas了</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/09/24/iqdxe-0.png" alt=""></p>
+<p><img src="/images/20250924103038.png" alt=""></p>
 <p>当然我们用中继转发的话只能连接飞牛nas，是无法连接Windows电脑和emby之类的服务的。虽然仿佛简单，但是局限也大。</p>
 <hr>
 <p>这么一大串下来，我们终于是把常用的远程连接都说完了。谁能想到，我本来只打算弄一个远程观看毛片的，结果把这一串玩意都折腾完了。忍不住感叹一句</p>

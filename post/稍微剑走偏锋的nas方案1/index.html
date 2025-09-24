@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 24 Sep 2025 01:15:09 &#43;0800"
+                  Modified <relative-time datetime="Wed, 24 Sep 2025 10:45:55 &#43;0800"
                     class="no-wrap">
-                    Wed, 24 Sep 2025 01:15:09 &#43;0800</relative-time>
+                    Wed, 24 Sep 2025 10:45:55 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -211,7 +211,7 @@
 <p>前文所说，nas本质上也就是一台电脑 <strong>（你甚至可以把主力电脑当作nas，只要你的电脑不关机，那就是好nas！）</strong> ，我们像是搭建电脑一样进行选择——成品nas/自建nas。</p>
 <h3 id="成品nas">成品nas</h3>
 <p>有着较高的售价的缺点，相比起自建nas简直可以说奸商抢钱，但是胜在方便省心，有着较为成熟的系统和靠谱的售后为你形形<strong>色色</strong>的数据保驾护航。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bjo4o-0.png" alt=""></p>
+<p><img src="/images/20250924103126.png" alt=""></p>
 <h3 id="自建nas">自建nas</h3>
 <p>虽然比起成品nas，总体价格会便宜不少，可以做到更便宜的价格更高级的配置。但需要跟组装普通电脑一样，我们会进行一系列但不包括买配件进行组装、安装合适的系统等一系列蛋疼的操作，还需要自己承担售后问题，自己对自己的数据负责。</p>
 <p>因此，一个合适的搭建方案就尤为重要。</p>
@@ -267,22 +267,22 @@
 <p>​<a href="https://www.bilibili.com/video/BV1DJ411D79y/?spm_id_from=888.80997.embed_other.whitelist&amp;t=605.111492&amp;bvid=BV1DJ411D79y&amp;vd_source=e216de4d99612620c830e676f0cc9618">【装机教程】超详细WIN10系统安装教程，官方ISO直装与PE两种方法教程，UEFI+GUID分区与Legacy+MBR分区_哔哩哔哩_bilibili</a>​</p>
 <h3 id="设置网络共享">设置网络共享</h3>
 <p>点开<code>设置&gt;网络和Internet&gt;高级网络共享设置&gt;高级共享设置</code>，把选项设置为如图所示</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bnotn-0.png" alt=""></p>
+<p><img src="/images/20250924103137.png" alt=""></p>
 <p>然后进入<code>本地安全策略&gt;帐户策略&gt;帐户锁定策略</code>，将设置更改为</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bnw2t-0.png" alt=""></p>
+<p><img src="/images/20250924103141.png" alt=""></p>
 <p>如此操作可以避免因为权限、密码输入错误等问题导致无法读取数据</p>
 <p>接下来，对着我们需要进行共享的文件夹设置为共享：<code>右键属性&gt;共享&gt;选择共享&gt;选择一个用户进行共享（图方便可以选择everyone）</code>​</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bnt77-0.png" alt=""></p>
+<p><img src="/images/20250924103146.png" alt=""></p>
 <p>然后选择<code>高级共享&gt;权限&gt;你更改选择的用户</code>，把<code>完全控制</code>勾选上，</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bo674-0.png" alt=""></p>
+<p><img src="/images/20250924103151.png" alt=""></p>
 <p>这样，该用户边对这个文件夹拥有完全控制的权限了。</p>
 <p>我们可以处于同一局域网的用其他电脑，在<code>文件资源管理器&gt;网络</code>中检测是否可以正确发现你新安装的电脑，接着选择已发现的新电脑，输入你之前选中帐户的用户名和密码访问共享文件夹，并尝试对共享文件夹内进行添加/删除文件测试。</p>
 <p>如果没有发现，请在其他电脑的文件资源管理器地址栏路径中输入<code>\\新电脑ip地址</code>（新电脑ip地址可以查看路由器或者在cmd中输入<code>ipconfig</code>来查询），这样就可以顺利的通过网络访问新电脑的共享文件夹了。</p>
 <p>‍</p>
 <p><strong>至此，Windows的smb设置是告一段落，在这里我们完全其实就可以把这个Windows当作一台win nas来使用了。我们就直接可以把emby等服务放到这台电脑上运行来达成随时访问的效果。</strong></p>
 <p>如果你安装的是和我一样的LTSC版本，那可以在<code>设置&gt;系统</code>中把<code>远程桌面</code>打开，然后在主电脑输入新电脑的ip、输入新电脑的帐户密码了远程访问桌面，脱离视频数据线的限制。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bo336-0.png" alt=""></p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bo0nu-0.png" alt=""></p>
+<p><img src="/images/20250924103156.png" alt=""></p>
+<p><img src="/images/20250924103200.png" alt=""></p>
 <hr>
 <h2 id="hyper-v安装nas系统">Hyper-V安装NAS系统</h2>
 <p>虽然前面已经达成了目的，但是我个人认为单纯的靠smb来远程访问文件还是过于粗糙了，因此还是用虚拟机的方式安装一个nas系统，以此达成更方便管理数据的目的。</p>
@@ -291,37 +291,36 @@
 <p>管理员身份打开<strong>powershell</strong>并输入<code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All</code>等待下载安装完毕。</p>
 <h3 id="安装nas系统">安装NAS系统</h3>
 <p>我这里选择最近还挺火的<a href="https://www.fnnas.com/">飞牛OS</a>进行安装。我们进入<a href="https://www.fnnas.com/download">下载</a>页面下载最新的固件，保存在新电脑的硬盘内。然后打开Hyper-V管理器，选择<code>虚拟交换机管理器</code>​</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bo3jq-0.png" alt=""></p>
+<p><img src="/images/20250924103205.png" alt=""></p>
 <p>然后选择<code>新建虚拟网络交换机&gt;外部&gt;建立虚拟交换机</code>​</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12boc0y-0.png" alt=""></p>
+<p><img src="/images/20250924103208.png" alt=""></p>
 <p>选择你的网卡，然后点击<code>确认</code>即可</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bocc7-0.png" alt=""></p>
+<p><img src="/images/20250924103213.png" alt=""></p>
 <p>这一步是建立一个虚拟交换机，让真实的物理网卡连接在交换机上，宿主机和fnos则是通过虚拟交换机间接和物理网卡链接在一起，这样宿主机和fnos就在网络上是同一个层级，方便我们后面用其他设备用浏览器去登录处于hyper-v中的fnos。</p>
 <p>下一步选择<code>新建&gt;虚拟机</code>​</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bocz1-0.png" alt=""></p>
+<p><img src="/images/20250924103217.png" alt=""></p>
 <p>名称随意，指定代数选择第一代</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bobqw-0.png" alt=""></p>
+<p><img src="/images/20250924103303.png" alt=""></p>
 <p>内存分配按需分配，只是单纯做数据管理的不在上面挂载服务，4GB绰绰有余。分配网络选择你刚刚建立好的虚拟网络交换机，连接虚拟机硬盘不知道的话就默认即可，安装选项选择<code>从可启动的 CD/DVD-ROM 安装操作系统</code>并选中下载好的固件</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bomtj-0.png" alt=""></p>
+<p>​<img src="/images/20250924103307.png" alt=""></p>
 <p>最后配置选择如图所示</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bogg5-0.png" alt=""></p>
+<p>​<img src="/images/20250924103311.png" alt=""></p>
 <p>这样我们成功就建立了一个虚拟机。接下来双击新建立的虚拟机，选择<code>启动</code>，按照提示一步一步操作即可安装好虚拟机，最后在浏览器（只要在同一局域网内的设备即可）输入<strong>红框中的地址</strong>即可进入到飞机OS中，完成初始化的设置</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bohfq-0.png" alt=""></p>
+<p><img src="/images/20250924103315.png" alt=""></p>
 <h3 id="飞牛os读取windows-smb共享文件夹">飞牛OS读取Windows smb共享文件夹</h3>
 <p>此时我们在浏览器进入飞牛os，点击<code>文件管理&gt;远程挂载&gt;挂载远程文件夹&gt;smb</code>，把信息填写完整即可。</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bor7a-0.png" alt=""></p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bor7a-0.png" alt=""></p>
+<p><img src="/images/20250924103322.png" alt=""></p>
 <p><strong>这样，在飞牛中进入</strong>​<code>文件管理&gt;远程挂载&gt;挂载远程文件夹</code>​ <strong>，双击挂载的文件夹便可以管理共享文件夹，在飞牛的手机端上也可以看到挂载的远程文件夹了。</strong></p>
 <hr>
 <h3 id="飞牛os中安装emby">飞牛OS中安装EMBY</h3>
 <p>如果不想要在Windows中挂载emby，也可以选择在飞牛中挂载，个人建议选择<strong>应用中心</strong>的emby</p>
-<p>​<img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bor7y-0.png" alt=""></p>
+<p>​<img src="/images/20250924103337.png" alt=""></p>
 <p>当然<strong>docker</strong>中的也可以</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bopki-0.png" alt=""></p>
+<p><img src="/images/20250924103342.png" alt=""></p>
 <p><strong>但，有现成的为什么不用现成的呢？</strong></p>
 <p>安装教程可以参考前篇。</p>
 <p>需要注意的是在<strong>新建媒体库</strong>的时候，把<strong>文件夹</strong>的路径选择<code>网络</code>​</p>
-<p><img src="https://easyimage.cyilin.top:10086/i/2025/05/29/12bozcn-0.png" alt=""></p>
+<p><img src="/images/20250924103346.png" alt=""></p>
 <p>然后选择你<strong>新电脑</strong>的<code>ip地址</code>，并选择路径即可。</p>
 </article>
               </div>
