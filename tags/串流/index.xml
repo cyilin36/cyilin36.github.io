@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>串流 on cyilin&#39;s blog</title>
-    <link>http://localhost:1313/tags/%E4%B8%B2%E6%B5%81/</link>
+    <link>https://cyilin36.github.io/tags/%E4%B8%B2%E6%B5%81/</link>
     <description>Recent content in 串流 on cyilin&#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 24 Sep 2025 20:16:23 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E4%B8%B2%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cyilin36.github.io/tags/%E4%B8%B2%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自用串流配置分享</title>
-      <link>http://localhost:1313/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</link>
+      <link>https://cyilin36.github.io/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</link>
       <pubDate>Tue, 26 Aug 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</guid>
+      <guid>https://cyilin36.github.io/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</guid>
       <description>让高性能电脑不在远离出差生活</description>
     </item>
   </channel>

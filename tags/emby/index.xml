@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emby on cyilin&#39;s blog</title>
-    <link>http://localhost:1313/tags/emby/</link>
+    <link>https://cyilin36.github.io/tags/emby/</link>
     <description>Recent content in Emby on cyilin&#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 24 Sep 2025 20:16:23 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/emby/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cyilin36.github.io/tags/emby/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emby的元数据插件——Episode Refresh</title>
-      <link>http://localhost:1313/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</link>
+      <link>https://cyilin36.github.io/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</link>
       <pubDate>Wed, 23 Jul 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</guid>
+      <guid>https://cyilin36.github.io/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</guid>
       <description>不再需要时刻盯着元数据网站</description>
     </item>
     <item>
       <title>Emby字体解决办法</title>
-      <link>http://localhost:1313/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <link>https://cyilin36.github.io/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
       <pubDate>Sun, 13 Jul 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <guid>https://cyilin36.github.io/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
       <description>消灭口口口字幕</description>
     </item>
     <item>
       <title>稍微剑走偏锋的nas方案——1</title>
-      <link>http://localhost:1313/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%881/</link>
+      <link>https://cyilin36.github.io/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%881/</link>
       <pubDate>Sat, 28 Dec 2024 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%881/</guid>
+      <guid>https://cyilin36.github.io/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%881/</guid>
       <description>我要给小姐姐一个温暖的家</description>
     </item>
     <item>
       <title>利用JavSP&#43;EMBY打造专属的毛片影音库</title>
-      <link>http://localhost:1313/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/</link>
+      <link>https://cyilin36.github.io/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/</link>
       <pubDate>Sun, 22 Dec 2024 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/</guid>
+      <guid>https://cyilin36.github.io/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/</guid>
       <description>瑟瑟才是第一动力来源</description>
     </item>
   </channel>

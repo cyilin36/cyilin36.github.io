@@ -2,122 +2,122 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on cyilin&#39;s blog</title>
-    <link>http://localhost:1313/post/</link>
+    <link>https://cyilin36.github.io/post/</link>
     <description>Recent content in Posts on cyilin&#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 24 Sep 2025 20:16:23 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cyilin36.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bitwarden搭建</title>
-      <link>http://localhost:1313/post/bitwarden%E6%90%AD%E5%BB%BA/</link>
+      <link>https://cyilin36.github.io/post/bitwarden%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Wed, 10 Sep 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/bitwarden%E6%90%AD%E5%BB%BA/</guid>
+      <guid>https://cyilin36.github.io/post/bitwarden%E6%90%AD%E5%BB%BA/</guid>
       <description>做密码的掌握者</description>
     </item>
     <item>
       <title>自用串流配置分享</title>
-      <link>http://localhost:1313/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</link>
+      <link>https://cyilin36.github.io/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</link>
       <pubDate>Tue, 26 Aug 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</guid>
+      <guid>https://cyilin36.github.io/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</guid>
       <description>让高性能电脑不在远离出差生活</description>
     </item>
     <item>
       <title>最终幻想：重生截图</title>
-      <link>http://localhost:1313/post/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3%E9%87%8D%E7%94%9F%E6%88%AA%E5%9B%BE/</link>
+      <link>https://cyilin36.github.io/post/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3%E9%87%8D%E7%94%9F%E6%88%AA%E5%9B%BE/</link>
       <pubDate>Thu, 14 Aug 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3%E9%87%8D%E7%94%9F%E6%88%AA%E5%9B%BE/</guid>
+      <guid>https://cyilin36.github.io/post/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3%E9%87%8D%E7%94%9F%E6%88%AA%E5%9B%BE/</guid>
       <description>个人觉得挺不错的截图</description>
     </item>
     <item>
       <title>更换输入法的二三事</title>
-      <link>http://localhost:1313/post/%E6%9B%B4%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/</link>
+      <link>https://cyilin36.github.io/post/%E6%9B%B4%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/</link>
       <pubDate>Sat, 09 Aug 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E6%9B%B4%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/</guid>
+      <guid>https://cyilin36.github.io/post/%E6%9B%B4%E6%8D%A2%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/</guid>
       <description>阿三写的代码简直就是狗屎</description>
     </item>
     <item>
       <title>一把风扇让我浪费三天时间</title>
-      <link>http://localhost:1313/post/%E4%B8%80%E6%8A%8A%E9%A3%8E%E6%89%87%E8%AE%A9%E6%88%91%E6%B5%AA%E8%B4%B9%E4%B8%89%E5%A4%A9%E6%97%B6%E9%97%B4/</link>
+      <link>https://cyilin36.github.io/post/%E4%B8%80%E6%8A%8A%E9%A3%8E%E6%89%87%E8%AE%A9%E6%88%91%E6%B5%AA%E8%B4%B9%E4%B8%89%E5%A4%A9%E6%97%B6%E9%97%B4/</link>
       <pubDate>Tue, 29 Jul 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E4%B8%80%E6%8A%8A%E9%A3%8E%E6%89%87%E8%AE%A9%E6%88%91%E6%B5%AA%E8%B4%B9%E4%B8%89%E5%A4%A9%E6%97%B6%E9%97%B4/</guid>
+      <guid>https://cyilin36.github.io/post/%E4%B8%80%E6%8A%8A%E9%A3%8E%E6%89%87%E8%AE%A9%E6%88%91%E6%B5%AA%E8%B4%B9%E4%B8%89%E5%A4%A9%E6%97%B6%E9%97%B4/</guid>
       <description>手贱害人</description>
     </item>
     <item>
       <title>Emby的元数据插件——Episode Refresh</title>
-      <link>http://localhost:1313/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</link>
+      <link>https://cyilin36.github.io/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</link>
       <pubDate>Wed, 23 Jul 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</guid>
+      <guid>https://cyilin36.github.io/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</guid>
       <description>不再需要时刻盯着元数据网站</description>
     </item>
     <item>
       <title>Emby字体解决办法</title>
-      <link>http://localhost:1313/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <link>https://cyilin36.github.io/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
       <pubDate>Sun, 13 Jul 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <guid>https://cyilin36.github.io/post/emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
       <description>消灭口口口字幕</description>
     </item>
     <item>
       <title>航迹云的彼方：瑛莉线（含剧透）</title>
-      <link>http://localhost:1313/post/%E8%88%AA%E8%BF%B9%E4%BA%91%E7%9A%84%E5%BD%BC%E6%96%B9%E7%91%9B%E8%8E%89%E7%BA%BF%E5%90%AB%E5%89%A7%E9%80%8F/</link>
+      <link>https://cyilin36.github.io/post/%E8%88%AA%E8%BF%B9%E4%BA%91%E7%9A%84%E5%BD%BC%E6%96%B9%E7%91%9B%E8%8E%89%E7%BA%BF%E5%90%AB%E5%89%A7%E9%80%8F/</link>
       <pubDate>Tue, 13 May 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E8%88%AA%E8%BF%B9%E4%BA%91%E7%9A%84%E5%BD%BC%E6%96%B9%E7%91%9B%E8%8E%89%E7%BA%BF%E5%90%AB%E5%89%A7%E9%80%8F/</guid>
+      <guid>https://cyilin36.github.io/post/%E8%88%AA%E8%BF%B9%E4%BA%91%E7%9A%84%E5%BD%BC%E6%96%B9%E7%91%9B%E8%8E%89%E7%BA%BF%E5%90%AB%E5%89%A7%E9%80%8F/</guid>
       <description>用一生来定义爱</description>
     </item>
     <item>
       <title>文件分享的折腾之旅</title>
-      <link>http://localhost:1313/post/%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%9A%84%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</link>
+      <link>https://cyilin36.github.io/post/%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%9A%84%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</link>
       <pubDate>Fri, 09 May 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%9A%84%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</guid>
+      <guid>https://cyilin36.github.io/post/%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%9A%84%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</guid>
       <description>赛博成圣之路</description>
     </item>
     <item>
       <title>WOL的折腾日记</title>
-      <link>http://localhost:1313/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</link>
+      <link>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</link>
       <pubDate>Tue, 06 May 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</guid>
+      <guid>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</guid>
       <description>一切皆可远程</description>
     </item>
     <item>
       <title>如何失去与如何去爱的故事——《It&#39;s My Cry!!!!!!!! 》</title>
-      <link>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E5%A4%B1%E5%8E%BB%E4%B8%8E%E5%A6%82%E4%BD%95%E5%8E%BB%E7%88%B1%E7%9A%84%E6%95%85%E4%BA%8Bits-my-cry-/</link>
+      <link>https://cyilin36.github.io/post/%E5%A6%82%E4%BD%95%E5%A4%B1%E5%8E%BB%E4%B8%8E%E5%A6%82%E4%BD%95%E5%8E%BB%E7%88%B1%E7%9A%84%E6%95%85%E4%BA%8Bits-my-cry-/</link>
       <pubDate>Tue, 25 Mar 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E5%A4%B1%E5%8E%BB%E4%B8%8E%E5%A6%82%E4%BD%95%E5%8E%BB%E7%88%B1%E7%9A%84%E6%95%85%E4%BA%8Bits-my-cry-/</guid>
+      <guid>https://cyilin36.github.io/post/%E5%A6%82%E4%BD%95%E5%A4%B1%E5%8E%BB%E4%B8%8E%E5%A6%82%E4%BD%95%E5%8E%BB%E7%88%B1%E7%9A%84%E6%95%85%E4%BA%8Bits-my-cry-/</guid>
       <description>二创最顶尖的作品之一！！！</description>
     </item>
     <item>
       <title>FRP 内网穿透的个人配置</title>
-      <link>http://localhost:1313/post/frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/</link>
+      <link>https://cyilin36.github.io/post/frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Thu, 06 Feb 2025 21:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://cyilin36.github.io/post/frp-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/</guid>
       <description>运营商最司马的一集</description>
     </item>
     <item>
       <title>如何优雅的追番</title>
-      <link>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%BD%E7%95%AA/</link>
+      <link>https://cyilin36.github.io/post/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%BD%E7%95%AA/</link>
       <pubDate>Thu, 06 Feb 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%BD%E7%95%AA/</guid>
+      <guid>https://cyilin36.github.io/post/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%BD%E7%95%AA/</guid>
       <description>让追番变得不再牛马</description>
     </item>
     <item>
       <title>稍微剑走偏锋的nas方案——2</title>
-      <link>http://localhost:1313/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%882/</link>
+      <link>https://cyilin36.github.io/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%882/</link>
       <pubDate>Wed, 01 Jan 2025 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%882/</guid>
+      <guid>https://cyilin36.github.io/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%882/</guid>
       <description>让家里的小姐姐来到你的身边~</description>
     </item>
     <item>
       <title>稍微剑走偏锋的nas方案——1</title>
-      <link>http://localhost:1313/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%881/</link>
+      <link>https://cyilin36.github.io/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%881/</link>
       <pubDate>Sat, 28 Dec 2024 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%881/</guid>
+      <guid>https://cyilin36.github.io/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%881/</guid>
       <description>我要给小姐姐一个温暖的家</description>
     </item>
     <item>
       <title>利用JavSP&#43;EMBY打造专属的毛片影音库</title>
-      <link>http://localhost:1313/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/</link>
+      <link>https://cyilin36.github.io/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/</link>
       <pubDate>Sun, 22 Dec 2024 20:32:08 +0800</pubDate>
-      <guid>http://localhost:1313/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/</guid>
+      <guid>https://cyilin36.github.io/post/%E5%88%A9%E7%94%A8javsp&#43;emby%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E7%9A%84%E6%AF%9B%E7%89%87%E5%BD%B1%E9%9F%B3%E5%BA%93/</guid>
       <description>瑟瑟才是第一动力来源</description>
     </item>
   </channel>
