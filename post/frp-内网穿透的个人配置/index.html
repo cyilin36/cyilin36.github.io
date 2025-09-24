@@ -16,7 +16,7 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    
+    <link rel="stylesheet" href="https://cyilin36.github.io/css/light.css"><link rel="stylesheet" href="https://cyilin36.github.io/css/custom.css">
     
 
     
@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 24 Sep 2025 22:50:28 &#43;0800"
+                  Modified <relative-time datetime="Thu, 25 Sep 2025 03:18:21 &#43;0800"
                     class="no-wrap">
-                    Wed, 24 Sep 2025 22:50:28 &#43;0800</relative-time>
+                    Thu, 25 Sep 2025 03:18:21 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -230,7 +230,7 @@
 <p>我们需要在服务器部署frp服务端（<strong>frps</strong>），在客户端上部署frp客户端（<strong>frpc</strong>）。</p>
 <p><a href="https://github.com/fatedier/frp/releases">Releases · fatedier/frp · GitHub</a></p>
 <p>我们从上面的连接下载适合自己版本的frp（frp_windows_amd64）并解压，可以得到以下这几个文件：</p>
-<p>​<img src="/images/20250924100652.png" alt=""></p>
+<p>​<img src="/images/FRP%20%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/20250925030505.png" alt=""></p>
 <p>我们首先把带<strong>frps</strong>字样的文件放到我们租用的服务器上，然后点开<strong>frps.toml</strong>，对frps进行基础配置。由于我只是需要转发http网页流量，因此我是这么写：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e">#【frp服务端口，用于frps和frpc之间通信用的】</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">bindPort</span> = <span style="color:#ae81ff">17603</span>
@@ -280,14 +280,14 @@
 <h1 id="frp常驻后台">Frp常驻后台</h1>
 <p>上面使用命令启动frp不但容易误触，而且每次启动也不方便，关机后还得再次输入命令，因此我们需要一个自动化启动的方案。由于我使用的是windows作为演示，因此我这里使用**<a href="https://nssm.cc/download">nssm</a>**将frp注册为windows的系统服务，从而达成自动开机启动frp。</p>
 <p>我们下载合适自己系统的**<a href="https://nssm.cc/download">nssm</a><strong>，并放到一个合适的目录上。打开cmd，使用<code>cd</code>命令进入到含有</strong>nssm.exe**的文件夹上。</p>
-<p><img src="/images/20250924100701.png" alt=""></p>
+<p><img src="/images/FRP%20%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/20250925030511.png" alt=""></p>
 <p>然后我们输入命令<code>nssm install</code>，就可以得到这样一个弹窗。</p>
-<p><img src="/images/20250924100807.png" alt=""></p>
+<p><img src="/images/FRP%20%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/20250925030515.png" alt=""></p>
 <p>在<strong>Application Path</strong>中选择frps的exe文件；<strong>Statup directory</strong>会自动填写到frp的根目录，不用管；<strong>Arguments</strong>则是填写<code>-c frps的配置文件路径</code>既可；<strong>Service name</strong>则是随意，指的是服务的名称，自己能记住就行，不能够和已有的服务同名。</p>
-<p>​<img src="/images/20250924100815.png" alt=""></p>
+<p>​<img src="/images/FRP%20%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/20250925030519.png" alt=""></p>
 <p>然后我们点击<strong>Install service</strong>既可成功注册，frpc端也是这样如法炮制。</p>
 <p>接着我们在搜索并打开“<strong>服务</strong>”，找到刚刚注册好的frp服务（<strong>Service name</strong>），然后点击启动即可。需要注意的是我们要右键frp服务并打开<strong>属性，</strong> 并把启动类型改成<strong>自动</strong>，这样才能一开机就自启动frp。</p>
-<p>​<img src="/images/20250924100822.png" alt=""></p>
+<p>​<img src="/images/FRP%20%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/20250925030523.png" alt=""></p>
 <p>至此，便是我目前配置的frp。</p>
 <p>如果不是该死的运营商天天想着拿ipv4收钱，我也不用这么麻烦。但是当我看到阿里云的ipv6开通居然要额外缴费，真是感慨：<strong>一山还有一山高啊。</strong></p>
 </article>
@@ -334,7 +334,29 @@
 
 </div>
 
-  
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://cyilin36.github.io/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
 </body>
 
 <script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>

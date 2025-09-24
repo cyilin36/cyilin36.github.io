@@ -16,7 +16,7 @@
     
     <meta name="theme-color" content="#1e2327">
 
-    
+    <link rel="stylesheet" href="https://cyilin36.github.io/css/light.css"><link rel="stylesheet" href="https://cyilin36.github.io/css/custom.css">
     
 
     
@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 24 Sep 2025 22:50:28 &#43;0800"
+                  Modified <relative-time datetime="Thu, 25 Sep 2025 03:18:21 &#43;0800"
                     class="no-wrap">
-                    Wed, 24 Sep 2025 22:50:28 &#43;0800</relative-time>
+                    Thu, 25 Sep 2025 03:18:21 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -219,29 +219,29 @@
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
                 <article class="markdown-body entry-content container-lg"><h1 id="前言">前言</h1>
-<p>看过我之前的<a href="https://cyilin.top/article/emby-2">文章</a>的朋友就知道，我个人是使用ani-rss一集一集的下载番剧，并通过emby进行番剧的元数据自动刮削、整理并且进行播放。</p>
+<p>看过我之前的文章的朋友就知道，我个人是使用ani-rss一集一集的下载番剧，并通过emby进行番剧的元数据自动刮削、整理并且进行播放。</p>
 <p>但是现在字幕组更新速度（比如ani字幕组）其实不算慢，90%会有资源已经下载完成且emby媒体库已经识别并要刮削了，但是相关的元数据网站（比如TMDB）还没来得及更新元数据的情况，经常会晚上几天。</p>
 <p>这时候就非常难受了——会出现看着有一些剧集有元数据而有一些没有元数据，显得非常不好看、突兀，得时不时的进到相关番剧的具体某一集点击<strong>刷新元数据</strong>，才能保证在第一时间获得最新的元数据。</p>
 <p>而我的解决办法便是通过emby自带的自带刷新元数据功能和相关插件来达到最好的效果。</p>
 <h1 id="自动刷新元数据">自动刷新元数据</h1>
 <h2 id="媒体库自动刷新元数据">媒体库自动刷新元数据</h2>
 <p>其实emby本身就自带了一个元数据刷新功能，在设置&gt;媒体库&gt;编辑中即可找到。</p>
-<p>​<img src="/images/20250924102019.png" alt=""></p>
+<p>​<img src="/images/Emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6%E2%80%94%E2%80%94Episode%20Refresh/20250925030422.png" alt=""></p>
 <p>可以在自动从互联网刷新元数据中设置自动刷新元数据的日期。但是也就只有这几个间隔时间选择，没有更短的时间。这对于一集一集追番我的来说时间隔得太久了，每个月才更新一次，剧集都出好几集了！</p>
 <p>因此还需要另外一个插件来进行补充——Episode Refresh。</p>
 <h2 id="episode-refresh元数据刷新插件">Episode Refresh——元数据刷新插件</h2>
 <p><strong>Episode Refresh</strong>是一个剧集元数据刷新的网站，它以最近剧集的播出日期为界限，根据剧集所在的媒体库元数据选择进行自动刷新元数据。由于是根据播出日期来决定是是否需要刷新元数据和，因此它作用于刷新<strong>电视剧</strong>类型的媒体库，电影之类的媒体库是无法生效的。</p>
 <p>我们可以在<code>设置&gt;插件&gt;Catalog&gt;元数据</code>中找到。</p>
-<p>​<img src="/images/20250924102026.png" alt=""></p>
+<p>​<img src="/images/Emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6%E2%80%94%E2%80%94Episode%20Refresh/20250925030428.png" alt=""></p>
 <p>此后我们再回到<code>设置&gt;插件&gt;我的插件</code>中即可看到已安装的Episode Refresh，点击它即可进入到具体的设置中。</p>
-<p>​<img src="/images/20250924102036.png" alt=""></p>
+<p>​<img src="/images/Emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6%E2%80%94%E2%80%94Episode%20Refresh/20250925030432.png" alt=""></p>
 <p><strong>Lookback days</strong>是指距离首次播出日期多少天之内的剧集，一般默认设置的7天也就满足了。</p>
 <p><strong>Include episdes with no premier date</strong>是指是否要刷新不带首播日期的剧集，这个看个人选择是否需要勾选。</p>
 <p>下面表格数据则是插件后续需要刷新的剧集。</p>
 <p>回到<code>设置&gt;计划任务</code>中，我们可以发现多了一个叫做<strong>Refresh Recently Aired Episodes</strong>的任务，这个便是Episode Refresh的自动运行设置了。</p>
-<p>​<img src="/images/20250924102042.png" alt=""></p>
+<p>​<img src="/images/Emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6%E2%80%94%E2%80%94Episode%20Refresh/20250925030436.png" alt=""></p>
 <p>点开可以设置什么时候进行一次插件的执行——即元数据的刷新。个人推荐一天一次，时间可以定在凌晨半夜。</p>
-<p>​<img src="/images/20250924102049.png" alt=""></p>
+<p>​<img src="/images/Emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6%E2%80%94%E2%80%94Episode%20Refresh/20250925030443.png" alt=""></p>
 <p>如果第一次等不及的，可以返回计划任务，点击带类似播放器播放符号即可立即执行一次插件的元数据刷新。</p>
 <h1 id="结尾">结尾</h1>
 <p>其实这也是我询问AI才知道有这么一个插件，直接谷歌搜都不知道有这玩意，虽然我用的AI正是谷歌家的Gemini就是了。</p>
@@ -289,7 +289,29 @@
 
 </div>
 
-  
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://cyilin36.github.io/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
 </body>
 
 <script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>

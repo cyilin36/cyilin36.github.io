@@ -1,0 +1,10 @@
+/* 专门针对代码块的背景色 */
+pre, code, .highlight, .chroma {
+    background-color: var(--color-canvas-subtle, #f6f8fa) !important;
+    /* 使用CSS变量，如果变量不存在则回退到#f6f8fa */
+}
+
+/* 确保代码块文字颜色也是深色 */
+pre, code {
+    color: var(--color-fg-default, #24292f) !important;
+}
