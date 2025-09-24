@@ -346,6 +346,24 @@
 <link rel="stylesheet" href='https://cyilin36.github.io/css/toc.css' />
 
   
+<div id="gitalk-container" class="gitalk-container"></div>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/gitalk.css'>
+<script src='https://cyilin36.github.io/js/gitalk.min.js'></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'Ov23liQKtrtwT2Ax2000',
+    clientSecret: '77542d944ee38787b154727e269a2417718b7a90',
+    repo: 'cyilin36.github.io',
+    owner: 'cyilin36',
+    admin: ['cyilin36'],
+    id: eval("location.pathname"), 
+    distractionFreeMode: false 
+  });
+  (function() {
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
 </div>
 
   
