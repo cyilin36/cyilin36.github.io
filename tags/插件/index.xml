@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>插件 on cyilin&#39;s blog</title>
+    <link>http://localhost:1313/tags/%E6%8F%92%E4%BB%B6/</link>
+    <description>Recent content in 插件 on cyilin&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 24 Sep 2025 20:16:23 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%8F%92%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emby的元数据插件——Episode Refresh</title>
+      <link>http://localhost:1313/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</link>
+      <pubDate>Wed, 23 Jul 2025 20:32:08 +0800</pubDate>
+      <guid>http://localhost:1313/post/emby%E7%9A%84%E5%85%83%E6%95%B0%E6%8D%AE%E6%8F%92%E4%BB%B6episode-refresh/</guid>
+      <description>不再需要时刻盯着元数据网站</description>
+    </item>
+  </channel>
+</rss>

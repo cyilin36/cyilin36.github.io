@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DDNS on cyilin&#39;s blog</title>
+    <link>http://localhost:1313/tags/ddns/</link>
+    <description>Recent content in DDNS on cyilin&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 24 Sep 2025 20:16:23 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ddns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自用串流配置分享</title>
+      <link>http://localhost:1313/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Tue, 26 Aug 2025 20:32:08 +0800</pubDate>
+      <guid>http://localhost:1313/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</guid>
+      <description>让高性能电脑不在远离出差生活</description>
+    </item>
+    <item>
+      <title>稍微剑走偏锋的nas方案——2</title>
+      <link>http://localhost:1313/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%882/</link>
+      <pubDate>Wed, 01 Jan 2025 20:32:08 +0800</pubDate>
+      <guid>http://localhost:1313/post/%E7%A8%8D%E5%BE%AE%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B%E7%9A%84nas%E6%96%B9%E6%A1%882/</guid>
+      <description>让家里的小姐姐来到你的身边~</description>
+    </item>
+  </channel>
+</rss>
