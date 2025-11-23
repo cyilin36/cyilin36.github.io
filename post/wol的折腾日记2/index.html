@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://cyilin36.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/syntax.css' />
+    <title>WOL的折腾日记——2 - cyilin&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/favicon.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="https://cyilin36.github.io/css/custom.css">
+    
+
+    
+    <meta name="description"
+  content="语音控制开关机真是太酷啦" />
+<meta name="keywords"
+  content='' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B02/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="WOL的折腾日记——2 - cyilin&#39;s blog" />
+<meta name="twitter:description"
+  content="语音控制开关机真是太酷啦" />
+<meta name="twitter:site" content="https://cyilin36.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://cyilin36.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="WOL的折腾日记——2 - cyilin&#39;s blog">
+<meta property="og:description"
+  content="语音控制开关机真是太酷啦" />
+<meta property="og:url" content="https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B02/" />
+<meta property="og:site_name" content="WOL的折腾日记——2" />
+<meta property="og:image"
+  content="https://cyilin36.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2025-11-23 20:02:43 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://cyilin36.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://cyilin36.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://cyilin36.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://cyilin36.github.io/">cyilin</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B02/">WOL的折腾日记——2</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Sun, 23 Nov 2025 20:02:43 &#43;0800"
+                    class="no-wrap">
+                    Sun, 23 Nov 2025 20:02:43 &#43;0800</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Sun, 23 Nov 2025 21:09:18 &#43;0800"
+                    class="no-wrap">
+                    Sun, 23 Nov 2025 21:09:18 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      1479 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/wol">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      wol
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/docker">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Docker
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      远程控制
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h1 id="前言">前言</h1>
+<p>作为一个经常在外地出差且热衷于远程控制的人来说，远程开关是必不可少的配置，毕竟设备在那空转不但浪费设备寿命，而且浪费电，没有人嫌弃钱多的。</p>
+<p>在之前我是配置了<strong>upsnap</strong>作为远控手段。不过最近主力机换成了iphone，不能在桌面添加网页快捷链接，这就导致我必须点进浏览器去登录upsnap。能用是能用，但这就显得不大方便和优雅了。</p>
+<p>正当我思索之际，我看到了ios快捷指令。唉！我可以呼出语音助手运行快捷指令来快捷开关机啊，这多优雅，这多方便。</p>
+<h1 id="远程开机">远程开机</h1>
+<p>远程开机，即是网络唤醒——wol，市面上已经有很多成熟的工具，没必要重复造轮子。考虑到后续是运行快捷指令来工作，因此流程越简单越好，不需要编写复杂的指令，而且也更稳定。于是我把选择了以前使用的工具：<a href="https://github.com/xiaoxinpro/WolGoWeb">xiaoxinpro/WolGoWeb: 基于Golang的远程唤醒WebAPI</a>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">wol-go-web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">chishin/wol-go-web:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">WolGoWeb</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">host</span> <span style="color:#75715e"># 必须要用host模式</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PORT=9090</span> <span style="color:#75715e"># 指定端口号，可自行更改</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">KEY=false</span>
+</span></span></code></pre></div><p>以上便是部署wol-go-web的docker compose命令。我们只需要访问一下url<code>http://服务器IP或域名:9090/wol?mac=需要唤醒主机的MAC地址</code>就能实现wol了。</p>
+<p>至于如何在主板设置wol开启，在很早以前的博客《WOL的折腾日记》便已经完成了，这里就不重复叙述了。</p>
+<h1 id="远程关机">远程关机</h1>
+<p>老实说关机这一步我有好几个选择，并且，例如可以使用快捷指令的ssh脚本运行关机指令就能轻松完成，只需要在同一个局域网下就能稳定生效，在虚拟组网下也运行良好，对我来说几乎是不增加工作量。</p>
+<p>但为了各个机型的兼容性和后续可能接入到home assistant中，我还是选择自己搭建一个工具：<a href="https://github.com/cyilin36/url-to-ssh">cyilin36/url-to-ssh: HTTP to SSH Gateway，浏览器访问url对指定设备输入命令</a>。</p>
+<p>这个工具的使用方法跟wol-go-web很像，都是url来调用工具。部署方式也很简单，我已经将镜像上传到github package上，直接拉取运行就行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">url-to-ssh</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">ghcr.io/cyilin36/url-to-ssh:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">url-to-ssh</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">host</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">HTTP_PORT=9091</span>
+</span></span></code></pre></div><p>访问的url格式是<code>http://&lt;容器IP&gt;:&lt;端口&gt;/control/&lt;命令&gt;?host=&lt;目标IP&gt;&amp;user=&lt;用户名&gt;&amp;pwd=&lt;密码&gt;&amp;port=&lt;SSH端口&gt;</code>。默认使用<code>22</code>端口。</p>
+<p>对于Windows，还需要一点特殊的设置。进到设置-系统-可选功能，在这里搜索并安装上<strong>openssh服务端和客户端</strong>。以此确保我们能正常通过ssh连接到需要远程关机的设备。</p>
+<h1 id="快捷指令">快捷指令</h1>
+<p>这一步是最简单的。</p>
+<ol>
+<li>来到快捷指令，新增一个指令，搜索操作<code>url</code>并点击添加，填入上面的wol-go-web的url链接。</li>
+<li>再次搜索操作<code>获取url内容</code>并点击添加。</li>
+<li>指令重命名为<code>电脑开机</code>。</li>
+</ol>
+<p>这样一个简单的语音控制远程开机就能弄好了。对于远程关机，操作也是一样的，照猫画虎即可，url处更改为url-to-ssh的url。</p>
+<h1 id="安卓设备">安卓设备</h1>
+<p>对于安卓设备，目前还没研究出如何通过语音助手来实现访问url，因此只能将链接放到桌面，手点一下才行。</p>
+<p>如果不局限于我这一套方案，且自己的设备有智能家居的管理软件，能绑定<strong>巴法云物联网</strong>，那也可以看看这个工具：<a href="https://github.com/xueayi/wake_on_mijia">xueayi/wake_on_mijia: Wake On Mijia（简称 wom ）通过订阅巴法云主题，在局域网广播 WOL 魔术包唤醒指定设备开机，并可选通过 SSH 远程关机 Windows 主机</a></p>
+<p>实测安装在自己的服务器上，可以同米家绑定巴法云，并通过小爱同学来进行语音唤醒、关机，甚至表现能比我这一套方案更好~~（沟槽的苹果国行的ai怎么还没端上来）~~。</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://cyilin36.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/toc.css' />
+
+  
+<div id="gitalk-container" class="gitalk-container"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/gitalk.css'>
+<script src='https://cyilin36.github.io/js/gitalk.min.js'></script>
+<script>
+  var pageUrl = window.location.pathname;
+  var hashId = md5(pageUrl);
+  
+  const gitalk = new Gitalk({
+    clientID: 'Ov23liQKtrtwT2Ax2000',    
+    clientSecret: '77542d944ee38787b154727e269a2417718b7a90', 
+    repo: 'cyilin36.github.io',            
+    owner: 'cyilin36',          
+    admin: ['cyilin36'],        
+    id: hashId,
+    title: 'WOL的折腾日记——2' || document.title,
+    distractionFreeMode: false
+  });
+  
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk评论在本地预览时默认不显示。';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://cyilin36.github.io/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://cyilin36.github.io/js/search.js'></script>
+
+
+
+</html>

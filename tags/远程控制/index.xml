@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wol on cyilin&#39;s blog</title>
-    <link>https://cyilin36.github.io/tags/wol/</link>
-    <description>Recent content in Wol on cyilin&#39;s blog</description>
+    <title>远程控制 on cyilin&#39;s blog</title>
+    <link>https://cyilin36.github.io/tags/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/</link>
+    <description>Recent content in 远程控制 on cyilin&#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 23 Nov 2025 21:09:18 +0800</lastBuildDate>
-    <atom:link href="https://cyilin36.github.io/tags/wol/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cyilin36.github.io/tags/%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WOL的折腾日记——2</title>
       <link>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B02/</link>
       <pubDate>Sun, 23 Nov 2025 20:02:43 +0800</pubDate>
       <guid>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B02/</guid>
       <description>语音控制开关机真是太酷啦</description>
-    </item>
-    <item>
-      <title>WOL的折腾日记</title>
-      <link>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</link>
-      <pubDate>Tue, 06 May 2025 20:32:08 +0800</pubDate>
-      <guid>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</guid>
-      <description>一切皆可远程</description>
     </item>
   </channel>
 </rss>

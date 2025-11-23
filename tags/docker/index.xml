@@ -6,8 +6,15 @@
     <description>Recent content in Docker on cyilin&#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 26 Sep 2025 22:38:08 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Nov 2025 21:09:18 +0800</lastBuildDate>
     <atom:link href="https://cyilin36.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WOL的折腾日记——2</title>
+      <link>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B02/</link>
+      <pubDate>Sun, 23 Nov 2025 20:02:43 +0800</pubDate>
+      <guid>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B02/</guid>
+      <description>语音控制开关机真是太酷啦</description>
+    </item>
     <item>
       <title>Bitwarden搭建</title>
       <link>https://cyilin36.github.io/post/bitwarden%E6%90%AD%E5%BB%BA/</link>
