@@ -6,8 +6,15 @@
     <description>Recent content in 串流 on cyilin&#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 14 Dec 2025 23:57:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 00:56:32 +0800</lastBuildDate>
     <atom:link href="https://cyilin36.github.io/tags/%E4%B8%B2%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的wireguard配置</title>
+      <link>https://cyilin36.github.io/post/%E6%88%91%E7%9A%84wireguard%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 17 Dec 2025 23:20:45 +0800</pubDate>
+      <guid>https://cyilin36.github.io/post/%E6%88%91%E7%9A%84wireguard%E9%85%8D%E7%BD%AE/</guid>
+      <description>wireguard的好帮手</description>
+    </item>
     <item>
       <title>自用串流配置分享</title>
       <link>https://cyilin36.github.io/post/%E8%87%AA%E7%94%A8%E4%B8%B2%E6%B5%81%E9%85%8D%E7%BD%AE%E5%88%86%E4%BA%AB/</link>

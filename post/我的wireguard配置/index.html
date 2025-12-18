@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://cyilin36.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://cyilin36.github.io/css/syntax.css' />
+    <title>我的wireguard配置 - cyilin&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/favicon.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    <link rel="stylesheet" href="https://cyilin36.github.io/css/custom.css">
+    
+
+    
+    <meta name="description"
+  content="wireguard的好帮手" />
+<meta name="keywords"
+  content='' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cyilin36.github.io/post/%E6%88%91%E7%9A%84wireguard%E9%85%8D%E7%BD%AE/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="我的wireguard配置 - cyilin&#39;s blog" />
+<meta name="twitter:description"
+  content="wireguard的好帮手" />
+<meta name="twitter:site" content="https://cyilin36.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://cyilin36.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="我的wireguard配置 - cyilin&#39;s blog">
+<meta property="og:description"
+  content="wireguard的好帮手" />
+<meta property="og:url" content="https://cyilin36.github.io/post/%E6%88%91%E7%9A%84wireguard%E9%85%8D%E7%BD%AE/" />
+<meta property="og:site_name" content="我的wireguard配置" />
+<meta property="og:image"
+  content="https://cyilin36.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2025-12-17 23:20:45 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://cyilin36.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          
+          <form target="_blank" id="search-form" action="" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+            </label>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://cyilin36.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/avatar.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  <div id="search-result" class="container-lg px-3 new-discussion-timeline" style="display: none;">
+</div>
+
+  
+<div class="application-main">
+  <div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://cyilin36.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://cyilin36.github.io/">cyilin</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="https://cyilin36.github.io/post/%E6%88%91%E7%9A%84wireguard%E9%85%8D%E7%BD%AE/">我的wireguard配置</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Wed, 17 Dec 2025 23:20:45 &#43;0800"
+                    class="no-wrap">
+                    Wed, 17 Dec 2025 23:20:45 &#43;0800</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Fri, 19 Dec 2025 00:56:32 &#43;0800"
+                    class="no-wrap">
+                    Fri, 19 Dec 2025 00:56:32 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      4265 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/frp">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      frp
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      内网穿透
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/%E4%B8%B2%E6%B5%81">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      串流
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h1 id="前言">前言</h1>
+<p>作为一个出差在外时间长过待在家时间的人，远程访问对我来说是不可获取的一部分。</p>
+<p>在之前，<a href="https://www.zerotier.com/">zerotier</a>基本能够覆盖99%的需求。但随着每次出差距离的加长，经常要在奇奇怪怪的酒店网络环境跨过半个甚至是一个中国访问设备，p2p打洞就不显得那么可靠了。但众所周知，zerotier的中继服务器基本都在国外，国内使用官方中继简直就是折磨，再加上手机使用的ios键位封闭，因此我决定再部署一套方案作为保底，双重保险更为有效。</p>
+<h1 id="选择wireguard的理由">选择wireguard的理由</h1>
+<p>先说说为什么我会选择wireguard而不是经常跟zerotier对比的<a href="https://tailscale.com/">tailscale</a>。</p>
+<ol>
+<li>wireguard作为几乎是最为基础、现在基本是个内网穿透服务软件都会带的协议，它几乎在任何平台都能找到相对应的软件。</li>
+<li>wireguard已经并入到linux主线，也就是说主要linux版本不是很旧，那就是自带一个wireguard，兼容性非常完美，开箱即用。</li>
+<li>相对于tailscale，它的自由度更大，能够自部署且任自己随意搭配。</li>
+<li>相对于tailscale的自部署版本——<a href="https://github.com/juanfont/headscale">headscale:</a>，wireguard自部署简单，而且不会在什么平台有莫名其妙的访问失败问题，<strong><del>说的就是你，iphone！</del></strong></li>
+</ol>
+<p>当然，tailscale也是有胜过它的优点，比如：</p>
+<ul>
+<li>tailscale可以借助官方的服务器，不需要在服务器上花钱和精力。wireguard的缺点便是需要一台<strong>公网服务器</strong>和<strong>没有自动p2p的功能，所有wireguard的流量都必须走服务器中继</strong>。</li>
+<li>tailscale跟zerotier一样，会优先进行p2p链接，提供最快的连接途径；当无法p2p直连时会自动切换到中继服务，可以说即有速度优先又有保底保障。</li>
+</ul>
+<p>因此我个人推荐，如果使用的是移动端使用安卓平台，或者压根不需要在移动端使用内网穿透服务的，优先tailscale，无论是自部署还是使用官方的服务器。</p>
+<p>话扯远了，最后让我选择wireguard的理由还是平台限制。app store上下载的tailscale虽然有提供了连接自部署服务器的选择，但不知为何，是死活无法成功登录自部署的服务器，更别说连接；使用安卓备用机测试则是一下子就连接成功。</p>
+<h1 id="wireguard部署">wireguard部署</h1>
+<p>本次要讲的是我自己的wireguard配置，而我又有一台openwrt作为旁路由，因此接下来会分为以下几个部分来叙述：</p>
+<ul>
+<li>wireguard的搭建</li>
+<li>wireguard服务端配置</li>
+<li>openwrt上的wireguard客户端配置</li>
+<li>在openwrt上为wireguard开启路由转发</li>
+</ul>
+<h2 id="wireguard的搭建">wireguard的搭建</h2>
+<p>由于自身经常习惯到处搬迁服务器，因此我非常喜欢使用docker，wireguard虽然在我的服务器中自带，但我还是选择docker部署wireguard：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">wireguard</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">lscr.io/linuxserver/wireguard:latest</span> <span style="color:#75715e"># wireguard本体</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">wireguard</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">cap_add</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">NET_ADMIN</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">SYS_MODULE</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">51820</span>:<span style="color:#ae81ff">51820</span><span style="color:#ae81ff">/udp</span> <span style="color:#75715e"># wireguard流量传输端口</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PUID=1000</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PGID=1000</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">TZ=Asia/Shanghai</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">SERVERPORT=51820</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">INTERNAL_SUBNET=10.0.8.0</span> <span style="color:#75715e"># wireguard网段，不要带“/24”</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">LOG_CONFS=true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">sysctls</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">net.ipv4.conf.all.src_valid_mark=1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./config:/config</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/lib/modules:/lib/modules</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">wireguard-ui</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">ngoduykhanh/wireguard-ui:latest</span> <span style="color:#75715e"># wireguard-ui容器，方便管理client</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">wireguard-ui</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">51821</span>:<span style="color:#ae81ff">5000</span> <span style="color:#75715e"># wireguard-ui端口</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">wireguard</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">cap_add</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">NET_ADMIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">WGUI_USERNAME=your_username</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">WGUI_PASSWORD=your_password</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">WGUI_MANAGE_START=false</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">WGUI_MANAGE_RESTART=true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">logging</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">driver</span>: <span style="color:#ae81ff">json-file</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">options</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">max-size</span>: <span style="color:#ae81ff">50m</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./db:/app/db</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./config/wg_confs:/etc/wireguard</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/var/run/docker.sock:/var/run/docker.sock</span>
+</span></span></code></pre></div><p>其中<code>ngoduykhanh/wireguard-ui</code>是为了方便管理wireguard而增加的，属于可选，wireguard本身就是用命令来对管理的。接下来的配置均在wireguard-ui中进行，官方的用法可以查看官方文档：<a href="https://zh-wireguard.com/quickstart/#side-by-side-video">快速入门 - WireGuard</a></p>
+<h2 id="wireguard服务端配置">wireguard服务端配置</h2>
+<h3 id="基础配置">基础配置</h3>
+<p>进入wireguard-ui后，我们首先需要完成一些基础设定。</p>
+<p>进入<strong>Global Settings</strong>，在<code>Endpoint Address</code>栏填写服务器的<strong>公网ip</strong>。<strong>DNS Servers</strong>写<code>1.1.1.1</code>和<code>255.5.5.5</code>。</p>
+<p>进入<strong>Wireguard Server</strong>，在<code>Server Interface Addresses</code>栏填写自己想要的wireguard网段，也就是上面compose中<code>INTERNAL_SUBNET</code>栏所填写的网段，例如：<code>10.0.8.0/24</code>。</p>
+<p><code>Post Up Script</code>栏填入<code>iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE</code>.</p>
+<p><code>Post Down Script</code>烂填入<code> iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE</code>.</p>
+<h3 id="添加clinet">添加clinet</h3>
+<p>在wireguard clients页面中，点击右上角的<code>new client</code>，在出现的弹窗中填写信息。</p>
+<p><code>name</code>：可以随意填写，仅作作为备注。</p>
+<p><code>IP Allocation</code>：代表该client被分配到的节点，自动配分配的到的节点会在事先设置好的网段内；可随意修改ip地址，只需要该ip在之前设定的网段内即可，例如：<code>10.0.8.45/32</code>。</p>
+<p><code>Allowed IPs</code>：表示可以通过wireguard的流量，这里的流量指的是<strong>client</strong>，也就是客户端所发出的流量。当客户端发出的流量符合<code>Allowed IPs</code>的设定，那么改流量变回自动被wireguard截取并发送到wireguard服务端进行分配。例如填写了<code>192.168.1.0/24</code>和<code>10.0.8.0/24</code>，那么该设备所有发往<code>192.168.1.0/24</code>和<code>10.0.8.0/24</code>都会被截取并发往wireguard服务器中进行下一步分配。</p>
+<p><code>Extra Allowed IPs</code>：表示一个client所额外负责的流量。本质上跟<code>IP Allocation</code>是一回事，代表该client所声明负责的流量。</p>
+<blockquote>
+<p>如果对上面的配置还是感到一头雾水，那也继续往下看，后面会对这些参数进行详细的说明。</p></blockquote>
+<p>点击右上角的apply config，并<strong>重启wireguard容器</strong>后，wireguard服务端的配置就结束了。我们可以点击每一个client左上角的<code>download</code>下载配置文件并导入到客户端，或者是点击<code>QR code</code>，让设备扫二维码导入client配置。</p>
+<h3 id="wireguard-ui参数说明">wireguard-ui参数说明</h3>
+<p>想要理解这些参数，还需要回到源头，也就是wireguard本身的配置文件才行。</p>
+<p>点击打开<code>config/wg_confs/wg0.conf</code>，在这里可以看到所有的wireguard服务端的所有配置
+。</p>
+<p>将<code>wg0.conf</code>、下载下来的client配置文件跟对照wireguard-ui的配置进行三者对照，不难发现wireguard-ui的<code>IP Allocation</code>和<code>Extra Allowed IPs</code>其实都是对<code>wg0.conf</code>中的<code>Allowed IPs</code>进行修改。</p>
+<p>在wireguard中，<code>Allowed IPs</code>其实是对流量进行声明、再分配的参数，无论是客户端配置还是服务端配置都是如此。在客户端中，凡是符合clinet配置文件中<code>Allowed IPs</code>的流量都会被wireguard客户端声明所负责，然后被wireguard客户端所截取并发往wireguard服务端进行分配；在服务端，wireguard会根据<code>wg0.conf</code>中每个client中<code>Allowed IPs</code>的参数，对客户端上传上来的流量进行分配转发。</p>
+<p>例如：客户端的client配置文件的<code>Allowed IPs</code>设置为<code>192.168.1.1/32</code>、<code>10.0.8.0/24</code>和<code>101.1.1.0/24</code>，服务端设置该client的<code>Allowed IPs</code>是<code>10.0.8.45/32</code>和<code>192.168.1.0/24</code>。那么在该客户端所在设备所有发往<code>192.168.1.1</code>、<code>10.0.8.0/24</code>和<code>101.1.1.0/24</code>的流量都会上传到服务端，而服务端再根据服务端中client的<code>Allowed IPs</code>对流量进行分配：</p>
+<ul>
+<li>客户端发出的<code>192.168.1.1</code>在服务端设置的<code>192.168.1.0/24</code>网段内，流量会转发到该client上。</li>
+<li>客户端发出的<code>10.0.8.45</code>符合服务端设置的<code>10.0.8.45/32</code>，流量会转发到该client上。</li>
+<li>客户端发出的<code>10.0.8.78</code>不符合服务端设置的<code>10.0.8.45/32</code>，也不在该client的<code>Allowed IPs</code>中任何一个网段内，流量不会转发到该client上。</li>
+<li>客户端发出的<code>101.1.1.80</code>不在该client的<code>Allowed IPs</code>中任何一个网段内，流量不会转发到该client上。</li>
+</ul>
+<p>因此，只需要对wireguard-ui的参数配置进行以下理解就行：</p>
+<ul>
+<li>wireguard-ui中的<code>Allowed IPs</code>对应的是客户端配置文件中的<code>Allowed IPs</code>。</li>
+<li>wireguard-ui中的<code>IP Allocation</code>和<code>Extra Allowed IPs</code>都是修改wireguard服务端配置文件中的<code>Allowed IPs</code>。</li>
+<li>客户端和服务端的<code>Allowed IPs</code>都是一样的，都是对特定流量进行声明、转发。客户端的<code>Allowed IPs</code>是将符合要求的流量发往服务端；服务端是将被上传的流量，对应各个client中<code>Allowed IPs</code>进行分配转发。</li>
+</ul>
+<h2 id="openwrt上的wireguard客户端配置">openwrt上的wireguard客户端配置</h2>
+<p>openwrt启动wireguard是一件非常简单的事情，甚至不需要打开shell，全程只用webui就能进行。</p>
+<p>打开<code>网络&gt;接口</code>，点击<code>添加新接口</code>，名称随意，协议选择<code>wireguard vpn</code>。在新弹窗中将页面拉到最后，点击<code>加载配置</code>，随后打开之前那下载的client的配置文件，并将里面的内容全部复制粘贴进去，再点击<code>导入设置</code>。</p>
+<p>随机点击<code>防火墙选项卡</code>，在<code>创建/分配防火墙区域</code>新建一个防火墙，名称可以随意命名。做完这一切后再点击保存并应用该配置。</p>
+<p>点击<code>网络&gt;防火墙</code>，对刚刚新增的防火墙进行编辑，将<code>区域内转发</code>、<code>入站数据</code>、<code>出站数据</code>都改成和<strong>lan防火墙</strong>一样，并再点击保存并应用。</p>
+<h3 id="在openwrt上为wireguard开启路由转发">在openwrt上为wireguard开启路由转发</h3>
+<p>正如之前所说的，wireguard可以指定client处理特定流量，从而变成一个网关。而在openwrt上实现也非常简单。</p>
+<p>打开<code>网络&gt;接口</code>，对wireguard接口进行编辑，点击对端，并将<strong>路由运行的ip</strong>勾选上。</p>
+<p>打开<code>网络&gt;防火墙</code>，编辑<strong>lan防火墙</strong>。将<code>允许转发到目标区域</code>和<code>允许来自源区域的转发</code>都添加上wireguard接口的防火墙，并将<code>IP 动态伪装</code>勾选上。最后再点击保存并应用。</p>
+<p>至此，这台openwrt变作为一个网关，在外地设备连接wireguard后直接输入局域网（并非wireguard ip）就能连接到其他未安装wireguard的设备了。</p>
+<p>其实根据这种玩法，可以轻松的将多个局域网连接在一起，只需要注意网段（无论是wireguard ip网段还是真实局域网网段）不能是同一个就行。</p>
+<h1 id="结尾">结尾</h1>
+<p>wireguard对我而言还是一个底线的保底手段，在ipv6越来越普及的今天，直连也是越来越方便了。希望有一天我能彻底淘汰这一套东西吧。</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://cyilin36.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/toc.css' />
+
+  
+<div id="gitalk-container" class="gitalk-container"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+<link rel="stylesheet" href='https://cyilin36.github.io/css/gitalk.css'>
+<script src='https://cyilin36.github.io/js/gitalk.min.js'></script>
+<script>
+  var pageUrl = window.location.pathname;
+  var hashId = md5(pageUrl);
+  
+  const gitalk = new Gitalk({
+    clientID: 'Ov23liQKtrtwT2Ax2000',    
+    clientSecret: '77542d944ee38787b154727e269a2417718b7a90', 
+    repo: 'cyilin36.github.io',            
+    owner: 'cyilin36',          
+    admin: ['cyilin36'],        
+    id: hashId,
+    title: '我的wireguard配置' || document.title,
+    distractionFreeMode: false
+  });
+  
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk评论在本地预览时默认不显示。';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+</div>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://cyilin36.github.io/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+      <li class="mr-3 mr-lg-0">GitHub and the Invertocat logo are trademarks of <a href="https://github.com/">GitHub, Inc.</a></li>
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="https://cyilin36.github.io/js/github-style.js"></script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script type="application/javascript" src='https://cyilin36.github.io/js/search.js'></script>
+
+
+
+</html>

@@ -6,8 +6,15 @@
     <description>Recent content in Posts on cyilin&#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 14 Dec 2025 23:57:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 00:56:32 +0800</lastBuildDate>
     <atom:link href="https://cyilin36.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的wireguard配置</title>
+      <link>https://cyilin36.github.io/post/%E6%88%91%E7%9A%84wireguard%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 17 Dec 2025 23:20:45 +0800</pubDate>
+      <guid>https://cyilin36.github.io/post/%E6%88%91%E7%9A%84wireguard%E9%85%8D%E7%BD%AE/</guid>
+      <description>wireguard的好帮手</description>
+    </item>
     <item>
       <title>WOL的折腾日记——2</title>
       <link>https://cyilin36.github.io/post/wol%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B02/</link>
