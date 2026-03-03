@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 14 Dec 2025 23:57:20 &#43;0800"
+                  Modified <relative-time datetime="Wed, 04 Mar 2026 00:32:24 &#43;0800"
                     class="no-wrap">
-                    Sun, 14 Dec 2025 23:57:20 &#43;0800</relative-time>
+                    Wed, 04 Mar 2026 00:32:24 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -233,14 +233,18 @@
 <h2 id="什么是种子什么是磁力链接">什么是种子，什么是磁力链接</h2>
 <p>首先我们需要大概知道磁力链接和种子文件。以下是百度百科对磁力链接的定义</p>
 <blockquote>
-<p>磁力链接（Magnet URI scheme），是中进行信息检索和下载文档的电脑程序。和基于“位置”连接的（URL）不同，磁力链接是基于（metadata）文件内容，属于（URN）。也就是说，磁力链接不基于文档的或定位符，而是在中，通过值来识别、搜索来下载文档。因为不依赖一个处于启动状态的主机来下载文档，所以特别适用没有中心服务器的对等网络。举例来说，一个常见的磁力链接形式为“magnet:?xt=urn:btih:”。</p></blockquote>
+<p>磁力链接（Magnet URI scheme），是中进行信息检索和下载文档的电脑程序。和基于“位置”连接的（URL）不同，磁力链接是基于（metadata）文件内容，属于（URN）。也就是说，磁力链接不基于文档的或定位符，而是在中，通过值来识别、搜索来下载文档。因为不依赖一个处于启动状态的主机来下载文档，所以特别适用没有中心服务器的对等网络。举例来说，一个常见的磁力链接形式为“magnet:?xt=urn:btih:”。</p>
+</blockquote>
 <p>接下来是是百度百科对BT种子的定义</p>
 <blockquote>
-<p>一种“.”文件，装有BT（BitTorrent）下载必须的文件信息，作用相当于下载里的链接。</p></blockquote>
+<p>一种“.”文件，装有BT（BitTorrent）下载必须的文件信息，作用相当于下载里的链接。</p>
+</blockquote>
 <blockquote>
-<p>一个用户要利用<a href="https://baike.baidu.com/item/BitTorrent%E5%8D%8F%E8%AE%AE/10961364?fromModule=lemma_inlink">BitTorrent协议</a>下载<a href="https://baike.baidu.com/item/%E6%96%87%E4%BB%B6/24602116?fromModule=lemma_inlink">文件</a>之前，先要从某个网站下载一个包含该文件相关信息的“.torrent”文件。</p></blockquote>
+<p>一个用户要利用<a href="https://baike.baidu.com/item/BitTorrent%E5%8D%8F%E8%AE%AE/10961364?fromModule=lemma_inlink">BitTorrent协议</a>下载<a href="https://baike.baidu.com/item/%E6%96%87%E4%BB%B6/24602116?fromModule=lemma_inlink">文件</a>之前，先要从某个网站下载一个包含该文件相关信息的“.torrent”文件。</p>
+</blockquote>
 <blockquote>
-<p>该种子文件包含一个称为“追踪器（tracker）”的<a href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8/100571?fromModule=lemma_inlink">服务器</a>节点（因特网上有很多追踪器）的地址，该追踪器负责维护参与一个特定文件分发的所有对等方的信息。</p></blockquote>
+<p>该种子文件包含一个称为“追踪器（tracker）”的<a href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8/100571?fromModule=lemma_inlink">服务器</a>节点（因特网上有很多追踪器）的地址，该追踪器负责维护参与一个特定文件分发的所有对等方的信息。</p>
+</blockquote>
 <p>简单来说就是通不同的方式来询问哪个人的电脑有资源且在上传，然后从别人那里拉取下载资源。我们下载的字幕组番剧资源是需要磁力链接/种子才能顺利下载。那么这些东西不是像普通的直链一样直接输入到浏览器就可以下载到的，是需要专门的bt下载器。BT下载器有很多，但是大部分常用的也就是<a href="https://www.qbittorrent.org/download.php">qbittorrent</a>(还有一个<a href="https://github.com/c0re100/qBittorrent-Enhanced-Edition">增强版</a>)和<a href="https://www.bitcomet.com/">比特彗星</a>了。这边我建议使用qbittorrent，因为这个下载器用的人众多，并且后面介绍的工具对它都有良好的支持和配合。</p>
 <h2 id="安装并设置好bt下载器">安装并设置好BT下载器</h2>
 <p>以qbittorrent举例，我们进入到qbittorrent的下载地址，下载到合适系统的最新版本（图一是官方版本，图二是增强版）。</p>
@@ -260,7 +264,8 @@
 <p>然而这也很麻烦，每次番剧的更新我们每次都得上去网站然后挑选资源，也是很浪费时间。因此我们需要一个手段/工具来自动获取磁力/种子，最好还能自动下载。这就是本次文章的重点——<strong>RSS链接</strong>。</p>
 <p>我们看看RSS的定义</p>
 <blockquote>
-<p>（也叫聚合内容）是一种基于XML的标准，在互联网上被广泛采用的内容包装和投递协议。RSS(Really Simple Syndication)是一种描述和同步网站内容的格式，是使用最广泛的XML应用。RSS搭建了信息迅速传播的一个技术平台，使得每个人都成为潜在的。发布一个RSS文件后，这个RSS中包含的信息就能直接被其他站点调用，而且由于这些数据都是标准的XML格式，所以也能在其他的终端和服务中使用，是一种描述和同步的格式。</p></blockquote>
+<p>（也叫聚合内容）是一种基于XML的标准，在互联网上被广泛采用的内容包装和投递协议。RSS(Really Simple Syndication)是一种描述和同步网站内容的格式，是使用最广泛的XML应用。RSS搭建了信息迅速传播的一个技术平台，使得每个人都成为潜在的。发布一个RSS文件后，这个RSS中包含的信息就能直接被其他站点调用，而且由于这些数据都是标准的XML格式，所以也能在其他的终端和服务中使用，是一种描述和同步的格式。</p>
+</blockquote>
 <p>简单来说，就是我们可以通过RSS来方便快捷的获取字幕组更新的资源。而qbittorrent也是支持这一点的。</p>
 <p>启用qbittorrent rss，我们先去设置里面，找到RSS，勾选启用获取RSS订阅。如果后续还想设置自动下载，那么也将启用RSS Torrent自动下载勾选上。</p>
 <p>​<img src="/images/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E8%BF%BD%E7%95%AA/20250925024909.png" alt=""></p>

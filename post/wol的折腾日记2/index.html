@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 23 Nov 2025 21:21:36 &#43;0800"
+                  Modified <relative-time datetime="Wed, 04 Mar 2026 00:32:24 &#43;0800"
                     class="no-wrap">
-                    Sun, 23 Nov 2025 21:21:36 &#43;0800</relative-time>
+                    Wed, 04 Mar 2026 00:32:24 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -233,30 +233,30 @@
 <p>正当我思索之际，我看到了ios快捷指令。唉！我可以呼出语音助手运行快捷指令来快捷开关机啊，这多优雅，这多方便。</p>
 <h1 id="远程开机">远程开机</h1>
 <p>远程开机，即是网络唤醒——wol，市面上已经有很多成熟的工具，没必要重复造轮子。考虑到后续是运行快捷指令来工作，因此流程越简单越好，不需要编写复杂的指令，而且也更稳定。于是我把选择了以前使用的工具：<a href="https://github.com/xiaoxinpro/WolGoWeb">xiaoxinpro/WolGoWeb: 基于Golang的远程唤醒WebAPI</a>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">wol-go-web</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">chishin/wol-go-web:latest</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">WolGoWeb</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">host</span> <span style="color:#75715e"># 必须要用host模式</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PORT=9090</span> <span style="color:#75715e"># 指定端口号，可自行更改</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">KEY=false</span>
-</span></span></code></pre></div><p>以上便是部署wol-go-web的docker compose命令。我们只需要访问一下url<code>http://服务器IP或域名:9090/wol?mac=需要唤醒主机的MAC地址</code>就能实现wol了。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">wol-go-web</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">chishin/wol-go-web:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">WolGoWeb</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w"> </span><span class="c"># 必须要用host模式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PORT=9090</span><span class="w"> </span><span class="c"># 指定端口号，可自行更改</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">KEY=false</span><span class="w">
+</span></span></span></code></pre></div><p>以上便是部署wol-go-web的docker compose命令。我们只需要访问一下url<code>http://服务器IP或域名:9090/wol?mac=需要唤醒主机的MAC地址</code>就能实现wol了。</p>
 <p>至于如何在主板设置wol开启，在很早以前的博客《WOL的折腾日记》便已经完成了，这里就不重复叙述了。</p>
 <h1 id="远程关机">远程关机</h1>
 <p>老实说关机这一步我有好几个选择，并且，例如可以使用快捷指令的ssh脚本运行关机指令就能轻松完成，只需要在同一个局域网下就能稳定生效，在虚拟组网下也运行良好，对我来说几乎是不增加工作量。</p>
 <p>但为了各个机型的兼容性和后续可能接入到home assistant中，我还是选择自己搭建一个工具：<a href="https://github.com/cyilin36/url-to-ssh">cyilin36/url-to-ssh: HTTP to SSH Gateway，浏览器访问url对指定设备输入命令</a>。</p>
 <p>这个工具的使用方法跟wol-go-web很像，都是url来调用工具。部署方式也很简单，我已经将镜像上传到github package上，直接拉取运行就行。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">url-to-ssh</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">ghcr.io/cyilin36/url-to-ssh:latest</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">url-to-ssh</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">host</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">HTTP_PORT=9091</span>
-</span></span></code></pre></div><p>访问的url格式是<code>http://&lt;容器IP&gt;:&lt;端口&gt;/control/&lt;命令&gt;?host=&lt;目标IP&gt;&amp;user=&lt;用户名&gt;&amp;pwd=&lt;密码&gt;&amp;port=&lt;SSH端口&gt;</code>。默认使用<code>22</code>端口。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">url-to-ssh</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/cyilin36/url-to-ssh:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">url-to-ssh</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">HTTP_PORT=9091</span><span class="w">
+</span></span></span></code></pre></div><p>访问的url格式是<code>http://&lt;容器IP&gt;:&lt;端口&gt;/control/&lt;命令&gt;?host=&lt;目标IP&gt;&amp;user=&lt;用户名&gt;&amp;pwd=&lt;密码&gt;&amp;port=&lt;SSH端口&gt;</code>。默认使用<code>22</code>端口。</p>
 <p>对于Windows，还需要一点特殊的设置。进到设置-系统-可选功能，在这里搜索并安装上<strong>openssh服务端和客户端</strong>。以此确保我们能正常通过ssh连接到需要远程关机的设备。</p>
 <h1 id="快捷指令">快捷指令</h1>
 <p>这一步是最简单的。</p>

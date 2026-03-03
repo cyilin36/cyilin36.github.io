@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 14 Dec 2025 23:57:18 &#43;0800"
+                  Modified <relative-time datetime="Wed, 04 Mar 2026 00:32:24 &#43;0800"
                     class="no-wrap">
-                    Sun, 14 Dec 2025 23:57:18 &#43;0800</relative-time>
+                    Wed, 04 Mar 2026 00:32:24 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -235,7 +235,8 @@
 <h1 id="解决方案">解决方案</h1>
 <p>折腾过上古卷轴mod和翻译的我很明确知道这是字体缺失造成的，于是经过我谷歌和ai的一顿搜索，我轻松就获得了解决方案——<strong>字体子集化</strong>！</p>
 <blockquote>
-<p><strong>字体子集化</strong>：简单来说，它会从完整的字体文件中<strong>只提取出你的项目实际用到的字符</strong>，然后生成一个新的、更小的字体文件。</p></blockquote>
+<p><strong>字体子集化</strong>：简单来说，它会从完整的字体文件中<strong>只提取出你的项目实际用到的字符</strong>，然后生成一个新的、更小的字体文件。</p>
+</blockquote>
 <p>也就是说只要对所有出现了<strong>口口口</strong>的字幕进行一次子集化就没什么事情了。</p>
 <p>然而，我的字幕数量繁多，且不知道那些字幕是需要子集化的。如果所有字幕都进行一次，那得通宵了。而且子集化所需的前置工具准备也略微繁琐，详情请看初之音的<a href="https://www.himiku.com/archives/my-solution-for-perfect-anime-subtitle-fonts.html">字体解决方案博客</a>。</p>
 <p>这时我灵光一闪——有没有能在视频播放时候<strong>实时进行子集化</strong>的emby插件呢！？</p>
@@ -246,27 +247,28 @@
 <p>​<img src="/images/Emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/20250925030454.png" alt=""></p>
 <p>其提供了手动安装和docker快速部署两种方案。虽然不是可以直接内嵌在emby中的插件，但是我恰好有nas，这点差别也不用多在意。</p>
 <p>我是个懒狗，docker部署自然就成了最佳选择。其部署方式也非常简单，作者也给出了部署的命令：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -d --name<span style="color:#f92672">=</span>fontinass --restart<span style="color:#f92672">=</span>unless-stopped <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -p 8012:8012 <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -e EMBY_SERVER_URL<span style="color:#f92672">=</span>http://<span style="color:#f92672">[</span>ip<span style="color:#f92672">]</span>:<span style="color:#f92672">[</span>port<span style="color:#f92672">]</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -v /etc/fontinassData:/data <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -v /path/to/your/fonts:/fonts <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  riderlty/fontinass:latest
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name<span class="o">=</span>fontinass --restart<span class="o">=</span>unless-stopped <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -p 8012:8012 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -e <span class="nv">EMBY_SERVER_URL</span><span class="o">=</span>http://<span class="o">[</span>ip<span class="o">]</span>:<span class="o">[</span>port<span class="o">]</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v /etc/fontinassData:/data <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -v /path/to/your/fonts:/fonts <span class="se">\
+</span></span></span><span class="line"><span class="cl">  riderlty/fontinass:latest
 </span></span></code></pre></div><p>当然也可以使用我自己写得compose模板：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">fontinass</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">riderlty/fontinass:latest</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">fontinass</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8012:8012&#34;</span> <span style="color:#75715e"># 后续访问emby/jellyfin的实际地址</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">EMBY_SERVER_URL=http://[ip]:[port]</span> <span style="color:#75715e"># emby/jellyfin服务器地址</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/fontInAss/data:/data</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/fontInAss/fonts:/fonts</span> <span style="color:#75715e"># 完整字体文件位置，子集化所需的原始字体都会从这个地方抽取</span>
-</span></span></code></pre></div><blockquote>
-<p>​<code>EMBY_SERVER_URL</code>：自己的emby/jellyfin服务器地址，最好用<code>http</code>链接。</p></blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">fontinass</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">riderlty/fontinass:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">fontinass</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;8012:8012&#34;</span><span class="w"> </span><span class="c"># 后续访问emby/jellyfin的实际地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">EMBY_SERVER_URL=http://[ip]:[port]</span><span class="w"> </span><span class="c"># emby/jellyfin服务器地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/fontInAss/data:/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/fontInAss/fonts:/fonts</span><span class="w"> </span><span class="c"># 完整字体文件位置，子集化所需的原始字体都会从这个地方抽取</span><span class="w">
+</span></span></span></code></pre></div><blockquote>
+<p>​<code>EMBY_SERVER_URL</code>：自己的emby/jellyfin服务器地址，最好用<code>http</code>链接。</p>
+</blockquote>
 <p>我们把一些搜罗到的原始、完整字体仍在映射<code>/fonts</code>的路径即可。我个人是推荐vcb的<a href="https://vcb-s.com/archives/1114">超级字体整合包</a>。</p>
 <p>这样就大功告成，后续访问映射了该docker的<code>8012</code>的端口就ok了，fontInAss会自动实时处理子集化，<strong>口口口</strong>问题也成功被解决。</p>
 <p>​<img src="/images/Emby%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/20250925030459.png" alt=""></p>

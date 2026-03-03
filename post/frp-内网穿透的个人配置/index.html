@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 14 Dec 2025 23:57:20 &#43;0800"
+                  Modified <relative-time datetime="Wed, 04 Mar 2026 00:32:24 &#43;0800"
                     class="no-wrap">
-                    Sun, 14 Dec 2025 23:57:20 &#43;0800</relative-time>
+                    Wed, 04 Mar 2026 00:32:24 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -232,45 +232,45 @@
 <p>我们从上面的连接下载适合自己版本的frp（frp_windows_amd64）并解压，可以得到以下这几个文件：</p>
 <p>​<img src="/images/FRP%20%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%85%8D%E7%BD%AE/20250925030505.png" alt=""></p>
 <p>我们首先把带<strong>frps</strong>字样的文件放到我们租用的服务器上，然后点开<strong>frps.toml</strong>，对frps进行基础配置。由于我只是需要转发http网页流量，因此我是这么写：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e">#【frp服务端口，用于frps和frpc之间通信用的】</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">bindPort</span> = <span style="color:#ae81ff">17603</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#【http服务端口，用于传输http流量，适合网页流量传输】</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">vhosthttpport</span> = <span style="color:#ae81ff">13470</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#【frps和frpc之间的通信授权码，为了安全起见青改成复杂一点的】</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">token</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c">#【frp服务端口，用于frps和frpc之间通信用的】</span>
+</span></span><span class="line"><span class="cl"><span class="nx">bindPort</span> <span class="p">=</span> <span class="mi">17603</span>
+</span></span><span class="line"><span class="cl"><span class="c">#【http服务端口，用于传输http流量，适合网页流量传输】</span>
+</span></span><span class="line"><span class="cl"><span class="nx">vhosthttpport</span> <span class="p">=</span> <span class="mi">13470</span>
+</span></span><span class="line"><span class="cl"><span class="c">#【frps和frpc之间的通信授权码，为了安全起见青改成复杂一点的】</span>
+</span></span><span class="line"><span class="cl"><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span> <span class="p">=</span> <span class="s2">&#34;xxx&#34;</span>
 </span></span></code></pre></div><p>在fprs的配置中，tcp类型的流量是不需要单独设置端口的，且我们是需要在frpc配中设置；tcpmux则是需要单独设置端口，它支持服务端 TCP 端口的多路复用，允许通过同一端口访问不同的内网服务，但是我一直没搞明白，因此在此按下不谈。</p>
 <h2 id="配置frpc客户端">配置FRPC（客户端）</h2>
 <p>我们把带<strong>frpc</strong>字样的文件放在自己的设备上，然后点开<strong>frpc.toml</strong>，对frpc进行基础配置。由于我只是需要转发http网页流量，因此我是这么写：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># 【公网服务器的ip地址】</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serverAddr</span> = <span style="color:#e6db74">&#34;xxx.xxx.xxx.xxx&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#【frp服务端口，用于frps和frpc之间通信用的，端口设置成和bindPort一样】</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serverPort</span> = <span style="color:#ae81ff">17603</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#【frps和frpc之间的通信授权码，之前写什么这里就写什么】</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">token</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">proxies</span>]]    <span style="color:#75715e">#代表一个项目的开始和结尾</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>    <span style="color:#75715e"># 项目的名称</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;http&#34;</span>    <span style="color:#75715e"># 项目的类型，前面我只是指定了http端口，因此这里我输入http</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localIP</span> = <span style="color:#e6db74">&#34;xxx.xxx.xxx.xxx&#34;</span>    <span style="color:#75715e">#本地ip，不一定是要frpc的ip，frp本身是有转发功能的，写入真实访问到的ip即可</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localPort</span> = <span style="color:#a6e22e">xxxx</span>    <span style="color:#75715e">#访问到的机器的具体端口</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">customdomains</span> = [<span style="color:#e6db74">&#34;xxxxx.xxxxx.xx&#34;</span>]    <span style="color:#75715e">#域名，这里是根据域名来流量应该转发到哪里端口</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 【公网服务器的ip地址】</span>
+</span></span><span class="line"><span class="cl"><span class="nx">serverAddr</span> <span class="p">=</span> <span class="s2">&#34;xxx.xxx.xxx.xxx&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#【frp服务端口，用于frps和frpc之间通信用的，端口设置成和bindPort一样】</span>
+</span></span><span class="line"><span class="cl"><span class="nx">serverPort</span> <span class="p">=</span> <span class="mi">17603</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#【frps和frpc之间的通信授权码，之前写什么这里就写什么】</span>
+</span></span><span class="line"><span class="cl"><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span> <span class="p">=</span> <span class="s2">&#34;xxx&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">proxies</span><span class="p">]]</span>    <span class="c">#代表一个项目的开始和结尾</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;xxx&#34;</span>    <span class="c"># 项目的名称</span>
+</span></span><span class="line"><span class="cl"><span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;http&#34;</span>    <span class="c"># 项目的类型，前面我只是指定了http端口，因此这里我输入http</span>
+</span></span><span class="line"><span class="cl"><span class="nx">localIP</span> <span class="p">=</span> <span class="s2">&#34;xxx.xxx.xxx.xxx&#34;</span>    <span class="c">#本地ip，不一定是要frpc的ip，frp本身是有转发功能的，写入真实访问到的ip即可</span>
+</span></span><span class="line"><span class="cl"><span class="nx">localPort</span> <span class="p">=</span> <span class="nx">xxxx</span>    <span class="c">#访问到的机器的具体端口</span>
+</span></span><span class="line"><span class="cl"><span class="nx">customdomains</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;xxxxx.xxxxx.xx&#34;</span><span class="p">]</span>    <span class="c">#域名，这里是根据域名来流量应该转发到哪里端口</span>
 </span></span></code></pre></div><p>以上配置中，我是设置了<strong>http类型端口</strong>进行流量转发，并通过<code>customdomains</code>参数来规划每一部分流量的具体走向，因此我这里是输入自己的域名。</p>
 <p>域名配置可以看我之前写得这一片教程<a href="https://cyilin.top/article/nas-2">稍微剑走偏锋的nas方案——2 | cyilin的小房间</a>，只要看域名那一块即可。</p>
 <p>对于tcp的流量，之前说过我们是<strong>不需要</strong>在frps指定一个tcp端口的，因为tcp会直接占用frps端的一整个端口，无法像是<strong>http类型</strong>这样通过<code>customdomains</code>来判定流量具体走向到什么端口。因此我们可以这么写：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># 【公网服务器的ip地址】</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serverAddr</span> = <span style="color:#e6db74">&#34;xxx.xxx.xxx.xxx&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#【frps和frpc之间的通信授权码，之前写什么这里就写什么】</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">auth</span>.<span style="color:#a6e22e">token</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[[<span style="color:#a6e22e">proxies</span>]]    <span style="color:#75715e">#代表一个项目的开始和结尾</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;xxx&#34;</span>    <span style="color:#75715e"># 项目的名称</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">type</span> = <span style="color:#e6db74">&#34;tcp&#34;</span>    <span style="color:#75715e"># 项目的类型，前面我只是指定了http端口，因此这里我输入http</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localIP</span> = <span style="color:#e6db74">&#34;xxx.xxx.xxx.xxx&#34;</span>    <span style="color:#75715e">#本地ip，不一定是要frpc的ip，frp本身是有转发功能的，写入真实访问到的ip即可</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">localPort</span> = <span style="color:#ae81ff">1029</span>    <span style="color:#75715e">#访问到的本地机器的具体端口</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">remotePort</span> = <span style="color:#ae81ff">6000</span>    <span style="color:#75715e">#监听服务器的端口，会把该端口的所有流量都转发到localPort设置的端口上</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 【公网服务器的ip地址】</span>
+</span></span><span class="line"><span class="cl"><span class="nx">serverAddr</span> <span class="p">=</span> <span class="s2">&#34;xxx.xxx.xxx.xxx&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#【frps和frpc之间的通信授权码，之前写什么这里就写什么】</span>
+</span></span><span class="line"><span class="cl"><span class="nx">auth</span><span class="p">.</span><span class="nx">token</span> <span class="p">=</span> <span class="s2">&#34;xxx&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">proxies</span><span class="p">]]</span>    <span class="c">#代表一个项目的开始和结尾</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;xxx&#34;</span>    <span class="c"># 项目的名称</span>
+</span></span><span class="line"><span class="cl"><span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;tcp&#34;</span>    <span class="c"># 项目的类型，前面我只是指定了http端口，因此这里我输入http</span>
+</span></span><span class="line"><span class="cl"><span class="nx">localIP</span> <span class="p">=</span> <span class="s2">&#34;xxx.xxx.xxx.xxx&#34;</span>    <span class="c">#本地ip，不一定是要frpc的ip，frp本身是有转发功能的，写入真实访问到的ip即可</span>
+</span></span><span class="line"><span class="cl"><span class="nx">localPort</span> <span class="p">=</span> <span class="mi">1029</span>    <span class="c">#访问到的本地机器的具体端口</span>
+</span></span><span class="line"><span class="cl"><span class="nx">remotePort</span> <span class="p">=</span> <span class="mi">6000</span>    <span class="c">#监听服务器的端口，会把该端口的所有流量都转发到localPort设置的端口上</span>
 </span></span></code></pre></div><h1 id="反向代理">反向代理</h1>
 <p>根据前面的步骤，我设置了<strong>13470</strong>端口作为http的流量转发端口，我们需要把访问到公网服务器的流量转发到这个端口上，因此反向代理或者端口转发就得派上用场了。而反向代理可以挂上SSL证书且可以实现端口复用，因此我优先选择使用反向代理。</p>
 <p>至于SSL证书和反向代理的使用请看之前的博客，翻到<strong>SSL证书</strong>这一部分。</p>

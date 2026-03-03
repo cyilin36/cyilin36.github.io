@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 14 Dec 2025 23:57:20 &#43;0800"
+                  Modified <relative-time datetime="Wed, 04 Mar 2026 00:32:24 &#43;0800"
                     class="no-wrap">
-                    Sun, 14 Dec 2025 23:57:20 &#43;0800</relative-time>
+                    Wed, 04 Mar 2026 00:32:24 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -231,7 +231,8 @@
 <p>既然已经装了nas，那为何不在nas上作文章呢？</p>
 <h1 id="wake-on-lan网络唤醒">Wake On Lan——网络唤醒</h1>
 <blockquote>
-<p>Wake-On-LAN简称WOL，是一种电源管理功能；如果存在网络活动，则允许设备将操作系统从待机或休眠模式中唤醒。许多主板厂商支持IBM提出的网络唤醒标准。该标准允许网络管理员远程打开PC机电源，以便进行文件升级、资源跟踪和设备清点等工作。</p></blockquote>
+<p>Wake-On-LAN简称WOL，是一种电源管理功能；如果存在网络活动，则允许设备将操作系统从待机或休眠模式中唤醒。许多主板厂商支持IBM提出的网络唤醒标准。该标准允许网络管理员远程打开PC机电源，以便进行文件升级、资源跟踪和设备清点等工作。</p>
+</blockquote>
 <p><a href="https://baike.baidu.com/item/wake-on-LAN/8971070">Wake On Lan（wol）</a>其实在很早以前就已经诞生，广泛到现在基本是一张主板就搭载这种技术。</p>
 <p>使用之前是一样要到bios中开启，跟之前<strong>通电自启</strong>一样，每个主板商的开启方式都不一样，但大同小异。还是以华硕主板举例：在bios进入到<strong>Advanced Mode，</strong> 点击<strong>APM Configuration，</strong> 并将<strong>Power On By PCI-E</strong>改为<strong>Enabled</strong>即可。</p>
 <p>改完bios后，我们还需要在Windows中设置一下方可。</p>
@@ -249,50 +250,50 @@
 <p><strong>有的兄弟，包有的。</strong></p>
 <p>在docker的神奇妙妙容器里面，有不少与wol相关的容器。个人觉得最方便的那就是<code>chishin/wol-go-web</code>，它可以只用一串链接就发送wol开机指令，真正做到了一键启动。</p>
 <p>部署也非常简单，以下是docker compse文件。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">wol-go-web</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">chishin/wol-go-web:latest</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">WolGoWeb</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">host</span> <span style="color:#75715e"># 必须要用host模式</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">PORT=9090</span> <span style="color:#75715e"># 指定端口号，可自行更改</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">KEY=false</span>
-</span></span></code></pre></div><p>部署完成后我们只需要在浏览器输入<code>http://服务器IP或域名:9090/wol?mac=需要唤醒主机的MAC地址</code>即可。在外地还可以通过ddns/内网穿透来进行唤醒主机。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">wol-go-web</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">chishin/wol-go-web:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">WolGoWeb</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w"> </span><span class="c"># 必须要用host模式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PORT=9090</span><span class="w"> </span><span class="c"># 指定端口号，可自行更改</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">KEY=false</span><span class="w">
+</span></span></span></code></pre></div><p>部署完成后我们只需要在浏览器输入<code>http://服务器IP或域名:9090/wol?mac=需要唤醒主机的MAC地址</code>即可。在外地还可以通过ddns/内网穿透来进行唤醒主机。</p>
 <h2 id="docker-upsnap">Docker upsnap</h2>
 <p><strong>upsnap</strong>也是一个wol服务，虽然提供了好看的webui，但是单论开机方便而言，其实不如是<code>chishin/wol-go-web</code>那种一条链接直接开机来的舒服。</p>
 <p><strong>But！它可以输入设置关机指令！</strong></p>
 <p>由于曾经试过串流软件卡死导致无法连接的主机，必须要重启的情况，显然光有wol是无法做到关机的，因此upsnap自然就被我看上了。</p>
 <p>部署upsnap也是非常简单</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">upsnap</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">upsnap</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image: ghcr.io/seriousm4x/upsnap:latest # images are also available on docker hub</span>: <span style="color:#ae81ff">seriousm4x/upsnap:5</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">host</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./pb_data:/app/pb_data</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># # To use a non-root user, create the mountpoint first (mkdir data) so that it has the right permission.</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># user: 1000:1000</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># environment:</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   - TZ=Europe/Berlin # Set container timezone for cron schedules</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   - UPSNAP_INTERVAL=*/10 * * * * * # Sets the interval in which the devices are pinged</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   - UPSNAP_SCAN_RANGE=192.168.1.0/24 # Scan range is used for device discovery on local network</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   - UPSNAP_SCAN_TIMEOUT=500ms # Scan timeout is nmap&#39;s --host-timeout value to wait for devices (https://nmap.org/book/man-performance.html)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   - UPSNAP_PING_PRIVILEGED=true # Set to false if you don&#39;t have root user permissions</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   - UPSNAP_WEBSITE_TITLE=Custom name # Custom website title</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># # dns is used for name resolution during network scan</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># dns:</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   - 192.18.0.1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   - 192.18.0.2</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># # you can change the listen ip:port inside the container like this:</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># entrypoint: /bin/sh -c &#34;./upsnap serve --http 0.0.0.0:5000&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># healthcheck:</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   test: curl -fs &#34;http://localhost:5000/api/health&#34; || exit 1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#   interval: 10s</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># # or install custom packages for shutdown</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># entrypoint: /bin/sh -c &#34;apk update &amp;&amp; apk add --no-cache &lt;YOUR_PACKAGE&gt; &amp;&amp; rm -rf /var/cache/apk/* &amp;&amp; ./upsnap serve --http 0.0.0.0:8090&#34;</span>
-</span></span></code></pre></div><h3 id="upsnap-开机">upsnap 开机</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">upsnap</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">upsnap</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image: ghcr.io/seriousm4x/upsnap:latest # images are also available on docker hub</span><span class="p">:</span><span class="w"> </span><span class="l">seriousm4x/upsnap:5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l">host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./pb_data:/app/pb_data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># # To use a non-root user, create the mountpoint first (mkdir data) so that it has the right permission.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># user: 1000:1000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># environment:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   - TZ=Europe/Berlin # Set container timezone for cron schedules</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   - UPSNAP_INTERVAL=*/10 * * * * * # Sets the interval in which the devices are pinged</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   - UPSNAP_SCAN_RANGE=192.168.1.0/24 # Scan range is used for device discovery on local network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   - UPSNAP_SCAN_TIMEOUT=500ms # Scan timeout is nmap&#39;s --host-timeout value to wait for devices (https://nmap.org/book/man-performance.html)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   - UPSNAP_PING_PRIVILEGED=true # Set to false if you don&#39;t have root user permissions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   - UPSNAP_WEBSITE_TITLE=Custom name # Custom website title</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># # dns is used for name resolution during network scan</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># dns:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   - 192.18.0.1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   - 192.18.0.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># # you can change the listen ip:port inside the container like this:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># entrypoint: /bin/sh -c &#34;./upsnap serve --http 0.0.0.0:5000&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># healthcheck:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   test: curl -fs &#34;http://localhost:5000/api/health&#34; || exit 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c">#   interval: 10s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># # or install custom packages for shutdown</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># entrypoint: /bin/sh -c &#34;apk update &amp;&amp; apk add --no-cache &lt;YOUR_PACKAGE&gt; &amp;&amp; rm -rf /var/cache/apk/* &amp;&amp; ./upsnap serve --http 0.0.0.0:8090&#34;</span><span class="w">
+</span></span></span></code></pre></div><h3 id="upsnap-开机">upsnap 开机</h3>
 <p>部署完成后在浏览器输入<code>http://服务器IP或域名:8090</code>即可进入upsnap的webui后台。</p>
 <p><img src="/images/WOL%E7%9A%84%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/20250925024230.png" alt=""></p>
 <p>点击右上角<strong>新增，</strong> 并输入<strong>备注、ip、mac地址、子网掩码</strong>便可</p>

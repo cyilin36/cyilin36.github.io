@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 14 Dec 2025 23:57:20 &#43;0800"
+                  Modified <relative-time datetime="Wed, 04 Mar 2026 00:32:24 &#43;0800"
                     class="no-wrap">
-                    Sun, 14 Dec 2025 23:57:20 &#43;0800</relative-time>
+                    Wed, 04 Mar 2026 00:32:24 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -250,18 +250,18 @@
 <p>这里是选择我们的影音媒体库管理软件，这一步会影响到我们的刮削下来元数据文件的结构和命名。因为我们后面用emby进行管理，而jellyfin其实就是截取字emby某个开源版本做成的软件，因此我们在这里输入<code>jellyfin</code>。</p>
 <p>​<code>save_dir</code>​</p>
 <p>影片自动整理、分门别类的路径，我们需要提前在这里设置好文件夹规则。在这里带<code>$</code>的其实就是文件夹命名的变量。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#a6e22e">$actress    #演员，即女优</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$title    #影片名称，不是番号</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$num    #这个才是番号</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$year    #影片发行年份</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$date    #影片发行日期，顺序为年月日</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$director    #导演</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$label    #番号系列，比如SSIS-816的SSIS</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$serial    #影片系列</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$producer    #影片制作商</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$publisher    #影片发行商</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$censor    #有码无码，步兵还是骑兵，被破解成无码的影片实际上在各个站点其实还是为有码，因此无码破解获得的元数据是有码的</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$score    #影片评分</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">$actress    #演员，即女优</span>
+</span></span><span class="line"><span class="cl"><span class="na">$title    #影片名称，不是番号</span>
+</span></span><span class="line"><span class="cl"><span class="na">$num    #这个才是番号</span>
+</span></span><span class="line"><span class="cl"><span class="na">$year    #影片发行年份</span>
+</span></span><span class="line"><span class="cl"><span class="na">$date    #影片发行日期，顺序为年月日</span>
+</span></span><span class="line"><span class="cl"><span class="na">$director    #导演</span>
+</span></span><span class="line"><span class="cl"><span class="na">$label    #番号系列，比如SSIS-816的SSIS</span>
+</span></span><span class="line"><span class="cl"><span class="na">$serial    #影片系列</span>
+</span></span><span class="line"><span class="cl"><span class="na">$producer    #影片制作商</span>
+</span></span><span class="line"><span class="cl"><span class="na">$publisher    #影片发行商</span>
+</span></span><span class="line"><span class="cl"><span class="na">$censor    #有码无码，步兵还是骑兵，被破解成无码的影片实际上在各个站点其实还是为有码，因此无码破解获得的元数据是有码的</span>
+</span></span><span class="line"><span class="cl"><span class="na">$score    #影片评分</span>
 </span></span></code></pre></div><p>如果你设定的规则里面带有不变的变量，那么变量本身最好用<code>{}</code>括起来，比如设置一个规则为<code>$num_2023</code>，在这里2023也被跟着算作变量了，因此实际应该写为<code>{$num}2023</code>。</p>
 <p>在这里我会把文件夹规则变成<code>女优名/影片名 - 女优名 [番号] [发行年份]</code>，因此我的路径规则则是<code>$actress/$title - $actress [$num] [$year]</code>。</p>
 <p><del><strong>你可以按需搭配，按xp分类也不是不行</strong></del></p>

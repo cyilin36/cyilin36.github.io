@@ -154,9 +154,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sun, 14 Dec 2025 23:57:20 &#43;0800"
+                  Modified <relative-time datetime="Wed, 04 Mar 2026 00:32:24 &#43;0800"
                     class="no-wrap">
-                    Sun, 14 Dec 2025 23:57:20 &#43;0800</relative-time>
+                    Wed, 04 Mar 2026 00:32:24 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -261,16 +261,16 @@
 <ul>
 <li>
 <p>​<code>docker-compose.yml</code>​</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>: <span style="color:#75715e"># 定义服务</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">nextcloud</span>: <span style="color:#75715e"># 服务名称</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nextcloud:stable</span> <span style="color:#75715e"># 使用的镜像名称，这里使用官方的 Nextcloud 镜像</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">nextcloud</span> <span style="color:#75715e"># 指定容器名称</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>: <span style="color:#75715e"># 映射端口</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;80:80&#34;</span> <span style="color:#75715e"># 将主机的 80 端口映射到容器的 80 端口</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>: <span style="color:#75715e"># 挂载卷</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/docker/nextcloud:/var/www/html</span> <span style="color:#75715e"># 将主机的 /docker/nextcloud 目录挂载到容器的 /var/www/html 目录</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span> <span style="color:#75715e"># 设置容器的重启策略，这里表示除非容器被停止，否则一直重启</span>
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w"> </span><span class="c"># 定义服务</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">nextcloud</span><span class="p">:</span><span class="w"> </span><span class="c"># 服务名称</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nextcloud:stable</span><span class="w"> </span><span class="c"># 使用的镜像名称，这里使用官方的 Nextcloud 镜像</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">nextcloud</span><span class="w"> </span><span class="c"># 指定容器名称</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="c"># 映射端口</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;80:80&#34;</span><span class="w"> </span><span class="c"># 将主机的 80 端口映射到容器的 80 端口</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="c"># 挂载卷</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/docker/nextcloud:/var/www/html</span><span class="w"> </span><span class="c"># 将主机的 /docker/nextcloud 目录挂载到容器的 /var/www/html 目录</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w"> </span><span class="c"># 设置容器的重启策略，这里表示除非容器被停止，否则一直重启</span><span class="w">
+</span></span></span></code></pre></div></li>
 </ul>
 <p>安装完毕后，我们需要通过浏览器，输入<code>ip:端口</code>进入到nextcloud管理页面，进行管理员注册和初始化。</p>
 <p>初始化完成后，我们需要通过插件才能加载smb协议。</p>
@@ -283,10 +283,10 @@
 <img src="/images/%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%9A%84%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/20250925025727.png" alt="">
 但是，在原版中是没有smb协议的支持的，我们需要在另外设置一番。</li>
 <li>打开你的ssh，连接并进入nextcloud，逐步输入以下命令。
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update <span style="color:#75715e"># 更新软件库</span>
-</span></span><span style="display:flex;"><span>apt install smbclient libsmbclient-dev 
-</span></span><span style="display:flex;"><span>pecl install smbclient
-</span></span><span style="display:flex;"><span>docker-php-ext-enable smbclient
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt update <span class="c1"># 更新软件库</span>
+</span></span><span class="line"><span class="cl">apt install smbclient libsmbclient-dev 
+</span></span><span class="line"><span class="cl">pecl install smbclient
+</span></span><span class="line"><span class="cl">docker-php-ext-enable smbclient
 </span></span></code></pre></div>执行完后，退出并重启nextcloud便可看到新增了smb的支持。</li>
 <li>最后填写相应的信息即可挂载。
 <img src="/images/%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%9A%84%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/20250925025731.png" alt=""></li>
@@ -297,29 +297,29 @@
 <ol>
 <li>
 <p>进入nextcloud，安装编辑器。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update <span style="color:#75715e"># 更新软件库</span>
-</span></span><span style="display:flex;"><span>apt install nano <span style="color:#75715e"># 安装编辑器，我用顺手了nano</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt update <span class="c1"># 更新软件库</span>
+</span></span><span class="line"><span class="cl">apt install nano <span class="c1"># 安装编辑器，我用顺手了nano</span>
 </span></span></code></pre></div></li>
 <li>
 <p>编辑<code>config.php</code>并添加信任域名。</p>
 <ul>
 <li>
 <p>打开<code>config.php</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano /var/www/html/config/config.php <span style="color:#75715e"># 编辑配置文件</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano /var/www/html/config/config.php <span class="c1"># 编辑配置文件</span>
 </span></span></code></pre></div></li>
 <li>
 <p>修改<code>’trusted_domains’</code>，将域名设置为信任域名。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span> <span style="color:#e6db74">&#39;trusted_domains&#39;</span> <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">array</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">0</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;test.cyilin.top:80&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;192.168.110.6:80&#39;</span>,
-</span></span><span style="display:flex;"><span>),
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"> <span class="s1">&#39;trusted_domains&#39;</span> <span class="o">=&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">array</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;test.cyilin.top:80&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span> <span class="o">=&gt;</span> <span class="s1">&#39;192.168.110.6:80&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">),</span>
 </span></span></code></pre></div></li>
 <li>
 <p>修改 <code>‘overwrite.cli.url’</code> <code>'overwritehost' 'overwriteprotocol'</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;overwrite.cli.url&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;https://nextcloud.cyilin.top:10086&#39;</span>,    <span style="color:#75715e">#指定Nextcloud的访问地址
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#39;overwritehost&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;nextcloud.cyilin.top:10086&#39;</span>,    <span style="color:#75715e">#Nextcloud的主机地址，指定主机名字
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#39;overwriteprotocol&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;https&#39;</span>,    <span style="color:#75715e">#使用https解析 可选步骤，客户端连接nextcloud的时候需要设置，不然就会被重定向为http
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">  <span class="s1">&#39;overwrite.cli.url&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;https://nextcloud.cyilin.top:10086&#39;</span><span class="p">,</span>    <span class="c1">#指定Nextcloud的访问地址
+</span></span></span><span class="line"><span class="cl">  <span class="s1">&#39;overwritehost&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;nextcloud.cyilin.top:10086&#39;</span><span class="p">,</span>    <span class="c1">#Nextcloud的主机地址，指定主机名字
+</span></span></span><span class="line"><span class="cl">  <span class="s1">&#39;overwriteprotocol&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;https&#39;</span><span class="p">,</span>    <span class="c1">#使用https解析 可选步骤，客户端连接nextcloud的时候需要设置，不然就会被重定向为http
 </span></span></span></code></pre></div></li>
 </ul>
 </li>
