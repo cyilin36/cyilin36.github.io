@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>游戏 on cyilin&#39;s blog</title>
-    <link>https://cyilin36.github.io/tags/%E6%B8%B8%E6%88%8F/</link>
-    <description>Recent content in 游戏 on cyilin&#39;s blog</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 27 Apr 2026 19:37:59 +0800</lastBuildDate>
-    <atom:link href="https://cyilin36.github.io/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>《永不落幕的前奏诗》观后感</title>
-      <link>https://cyilin36.github.io/post/%E6%B0%B8%E4%B8%8D%E8%90%BD%E5%B9%95%E7%9A%84%E5%89%8D%E5%A5%8F%E8%AF%97%E8%A7%82%E5%90%8E%E6%84%9F/</link>
-      <pubDate>Mon, 27 Apr 2026 19:31:11 +0800</pubDate>
-      <guid>https://cyilin36.github.io/post/%E6%B0%B8%E4%B8%8D%E8%90%BD%E5%B9%95%E7%9A%84%E5%89%8D%E5%A5%8F%E8%AF%97%E8%A7%82%E5%90%8E%E6%84%9F/</guid>
-      <description>感觉不如柚子社</description>
-    </item>
-    <item>
-      <title>最终幻想：重生截图</title>
-      <link>https://cyilin36.github.io/post/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3%E9%87%8D%E7%94%9F%E6%88%AA%E5%9B%BE/</link>
-      <pubDate>Thu, 14 Aug 2025 20:32:08 +0800</pubDate>
-      <guid>https://cyilin36.github.io/post/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3%E9%87%8D%E7%94%9F%E6%88%AA%E5%9B%BE/</guid>
-      <description>个人觉得挺不错的截图</description>
-    </item>
-    <item>
-      <title>航迹云的彼方：瑛莉线（含剧透）</title>
-      <link>https://cyilin36.github.io/post/%E8%88%AA%E8%BF%B9%E4%BA%91%E7%9A%84%E5%BD%BC%E6%96%B9%E7%91%9B%E8%8E%89%E7%BA%BF%E5%90%AB%E5%89%A7%E9%80%8F/</link>
-      <pubDate>Tue, 13 May 2025 20:32:08 +0800</pubDate>
-      <guid>https://cyilin36.github.io/post/%E8%88%AA%E8%BF%B9%E4%BA%91%E7%9A%84%E5%BD%BC%E6%96%B9%E7%91%9B%E8%8E%89%E7%BA%BF%E5%90%AB%E5%89%A7%E9%80%8F/</guid>
-      <description>用一生来定义爱</description>
-    </item>
-  </channel>
+	<channel>
+		<title>游戏 on cyilin&#39;s blog</title>
+		<link>https://cyilin36.github.io/tags/%E6%B8%B8%E6%88%8F/</link>
+		<description>Recent content in 游戏 on cyilin&#39;s blog</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 03 Jun 2026 01:18:13 +0800</lastBuildDate>
+		
+			<atom:link href="https://cyilin36.github.io/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>《次元错位恋人》游玩感受</title>
+				<link>https://cyilin36.github.io/post/%E6%AC%A1%E5%85%83%E9%94%99%E4%BD%8D%E6%81%8B%E4%BA%BA%E6%B8%B8%E7%8E%A9%E6%84%9F%E5%8F%97/</link>
+				<pubDate>Wed, 03 Jun 2026 01:07:17 +0800</pubDate>
+				<guid>https://cyilin36.github.io/post/%E6%AC%A1%E5%85%83%E9%94%99%E4%BD%8D%E6%81%8B%E4%BA%BA%E6%B8%B8%E7%8E%A9%E6%84%9F%E5%8F%97/</guid>
+				<description>强烈推荐游玩的佳作，玩玩不亏的</description>
+			</item>
+			<item>
+				<title>《永不落幕的前奏诗》观后感</title>
+				<link>https://cyilin36.github.io/post/%E6%B0%B8%E4%B8%8D%E8%90%BD%E5%B9%95%E7%9A%84%E5%89%8D%E5%A5%8F%E8%AF%97%E8%A7%82%E5%90%8E%E6%84%9F/</link>
+				<pubDate>Mon, 27 Apr 2026 19:31:11 +0800</pubDate>
+				<guid>https://cyilin36.github.io/post/%E6%B0%B8%E4%B8%8D%E8%90%BD%E5%B9%95%E7%9A%84%E5%89%8D%E5%A5%8F%E8%AF%97%E8%A7%82%E5%90%8E%E6%84%9F/</guid>
+				<description>感觉不如柚子社</description>
+			</item>
+			<item>
+				<title>最终幻想：重生截图</title>
+				<link>https://cyilin36.github.io/post/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3%E9%87%8D%E7%94%9F%E6%88%AA%E5%9B%BE/</link>
+				<pubDate>Thu, 14 Aug 2025 20:32:08 +0800</pubDate>
+				<guid>https://cyilin36.github.io/post/%E6%9C%80%E7%BB%88%E5%B9%BB%E6%83%B3%E9%87%8D%E7%94%9F%E6%88%AA%E5%9B%BE/</guid>
+				<description>个人觉得挺不错的截图</description>
+			</item>
+			<item>
+				<title>航迹云的彼方：瑛莉线（含剧透）</title>
+				<link>https://cyilin36.github.io/post/%E8%88%AA%E8%BF%B9%E4%BA%91%E7%9A%84%E5%BD%BC%E6%96%B9%E7%91%9B%E8%8E%89%E7%BA%BF%E5%90%AB%E5%89%A7%E9%80%8F/</link>
+				<pubDate>Tue, 13 May 2025 20:32:08 +0800</pubDate>
+				<guid>https://cyilin36.github.io/post/%E8%88%AA%E8%BF%B9%E4%BA%91%E7%9A%84%E5%BD%BC%E6%96%B9%E7%91%9B%E8%8E%89%E7%BA%BF%E5%90%AB%E5%89%A7%E9%80%8F/</guid>
+				<description>用一生来定义爱</description>
+			</item>
+	</channel>
 </rss>
