@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Mac on cyilin&#39;s blog</title>
+		<link>https://cyilin36.github.io/tags/mac/</link>
+		<description>Recent content in Mac on cyilin&#39;s blog</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 26 Aug 2026 11:47:42 +0800</lastBuildDate>
+		
+			<atom:link href="https://cyilin36.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>我的Mac工具表</title>
+				<link>https://cyilin36.github.io/post/%E6%88%91%E7%9A%84mac%E5%B7%A5%E5%85%B7%E8%A1%A8/</link>
+				<pubDate>Wed, 26 Aug 2026 11:38:44 +0800</pubDate>
+				<guid>https://cyilin36.github.io/post/%E6%88%91%E7%9A%84mac%E5%B7%A5%E5%85%B7%E8%A1%A8/</guid>
+				<description>mac刚需工具是真的多啊</description>
+			</item>
+	</channel>
+</rss>
